@@ -1,0 +1,19 @@
+{
+  "name": "kvic-beekeeper-app",
+  "version": "1.0.0",
+  "description": "KVIC Bee Mitra - National Honey Mission Beekeeper Web Application",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve -l 3000 --no-port-switching .",
+    "dev": "npx serve -l 3000 --no-port-switching .",
+    "serve": "npx serve -l 3000 --no-port-switching ."
+  },
+  "keywords": [
+    "kvic",
+    "beekeeper",
+    "iot",
+    "honey-mission"
+  ],
+  "author": "",
+  "license": "ISC"
+}

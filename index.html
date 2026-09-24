@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KVIC Beekeeper - National Honey Mission Portal</title>
+  <!-- Google Fonts: Outfit & Indian Scripts (Hindi, Tamil, Telugu, Kannada, Malayalam) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700;800&family=Noto+Sans+Tamil:wght@400;600;700;800&family=Noto+Sans+Telugu:wght@400;600;700;800&family=Noto+Sans+Kannada:wght@400;600;700;800&family=Noto+Sans+Malayalam:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=3.4">
+</head>
+<body>
+  <div class="app-layout">
+    
+    <!-- Top Modern Desktop Navbar -->
+    <header class="app-navbar">
+      <div class="nav-container">
+        
+        <!-- Brand & Emblem -->
+        <div class="brand-block">
+          <div class="kvic-emblem">
+            <span class="emblem-icon">🐝</span>
+          </div>
+          <div class="brand-text">
+            <h1 class="brand-title">KVIC <span class="highlight">BEE MITRA</span></h1>
+          </div>
+        </div>
+
+
+        <!-- Right Header Actions -->
+        <div class="header-actions">
+          <div class="sensor-sync-badge">
+            <span class="live-dot"></span>
+            <span data-i18n="liveSensorsBadge">सक्रिय सेंसर</span>
+          </div>
+
+          <!-- Language Selector Dropdown -->
+          <div class="lang-dropdown-wrapper" id="langDropdownWrapper">
+            <button class="lang-btn" id="langToggleBtn" title="Choose Language / भाषा चुनें">
+              <span class="lang-flag" id="currentLangFlag">🇮🇳</span>
+              <span id="currentLangLabel">हिंदी</span>
+              <span class="dropdown-chevron">▾</span>
+            </button>
+            <div class="lang-dropdown-menu hidden" id="langDropdownMenu">
+              <button class="lang-option" data-lang="en">
+                <span class="opt-flag">🇬🇧</span>
+                <span class="opt-name">English</span>
+                <span class="opt-check">✓</span>
+              </button>
+              <button class="lang-option active" data-lang="hi">
+                <span class="opt-flag">🇮🇳</span>
+                <span class="opt-name">हिंदी (Hindi)</span>
+                <span class="opt-check">✓</span>
+              </button>
+              <button class="lang-option" data-lang="ta">
+                <span class="opt-flag">🇮🇳</span>
+                <span class="opt-name">தமிழ் (Tamil)</span>
+                <span class="opt-check">✓</span>
+              </button>
+              <button class="lang-option" data-lang="te">
+                <span class="opt-flag">🇮🇳</span>
+                <span class="opt-name">తెలుగు (Telugu)</span>
+                <span class="opt-check">✓</span>
+              </button>
+              <button class="lang-option" data-lang="kn">
+                <span class="opt-flag">🇮🇳</span>
+                <span class="opt-name">ಕನ್ನಡ (Kannada)</span>
+                <span class="opt-check">✓</span>
+              </button>
+              <button class="lang-option" data-lang="ml">
+                <span class="opt-flag">🇮🇳</span>
+                <span class="opt-name">മലയാളം (Malayalam)</span>
+                <span class="opt-check">✓</span>
+              </button>
+            </div>
+          </div>
+
+          <button class="speak-btn pulse-glow" id="voiceSpeakBtn" title="Listen Status / आवाज़ से सुनें">
+            <span class="speaker-icon">🔊</span>
+            <span class="speak-text" data-i18n="speakBtn">सुनें</span>
+          </button>
+
+          <button class="voice-shortcut-btn" id="navVoiceCenter" title="Voice Guide / बोलकर सुनें">
+            <span>🎙️</span>
+          </button>
+        </div>
+
+        <!-- Beekeeper Profile Button -->
+        <button class="profile-btn" id="userProfileBtn" title="Beekeeper Profile / प्रोफ़ाइल" aria-label="Beekeeper Profile">
+          <div class="profile-avatar-wrap">
+            <span class="profile-emoji">👤</span>
+          </div>
+        </button>
+
+      </div>
+    </header>
+
+    <!-- Hive Selector Strip (Full Width) -->
+    <section class="hive-bar-strip">
+      <div class="main-container">
+        <div class="hive-bar-inner">
+          <div class="hive-bar-title-wrap">
+            <span class="section-micro-label" data-i18n="selectHive">आपकी पेटियाँ (Select Hive)</span>
+            <button class="hive-boxes-menu-btn" id="hiveBoxesMenuBtn" title="View all boxes / सभी पेटियाँ देखें">
+              <span class="btn-box-icon">📦</span>
+              <span data-i18n="hiveBoxesBtn">Hive Boxes</span>
+              <span class="hive-boxes-count-badge" id="hiveCountBadge">3</span>
+              <span class="chevron-down">▾</span>
+            </button>
+          </div>
+          <div class="hive-scroll-row" id="hiveTabsContainer">
+            <!-- Populated via JS -->
+          </div>
+          <button class="add-hive-btn" id="addHiveBtn" data-i18n="addHiveBtn" title="Add Hive">+ नया बॉक्स जोड़ें</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Dashboard Container -->
+    <main class="main-container main-content" id="mainContent">
+
+      <!-- Quick Voice Speaking Banner (when active) -->
+      <div class="audio-banner hidden" id="audioBanner">
+        <div class="audio-waveform">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <p id="audioTranscriptText">बोल रहे हैं...</p>
+        <button class="audio-stop-btn" id="audioStopBtn" title="Stop Speech">✕</button>
+      </div>
+
+      <!-- HERO ROW: Master Condition Card & Honey Harvest Forecast -->
+      <div class="hero-dashboard-row">
+        
+        <!-- 1. MASTER CONDITION CARD: Green to Red Visual Line Indication -->
+        <section class="master-condition-card" id="masterConditionCard">
+          <div class="condition-top">
+            <div class="condition-emoji-box" id="conditionEmojiBox">
+              <span class="large-emoji" id="conditionEmoji">🟢</span>
+            </div>
+            <div class="condition-meta">
+              <div class="condition-meta-row">
+                <span class="condition-tag-label" data-i18n="conditionTitle">पेटी की स्थिति (Hive Health)</span>
+                <span class="hive-initiated-badge" id="hiveInitiatedBadge" title="Box Initiation Date / स्थापना तिथि">
+                  <span class="cal-icon">📅</span>
+                  <span class="init-label" data-i18n="initiatedLabel">स्थापना:</span>
+                  <strong class="init-val" id="hiveInitiatedDate">15 Jan 2026</strong>
+                </span>
+              </div>
+              <h2 class="condition-status-text" id="conditionStatusText">सब कुछ बढ़िया है</h2>
+              <span class="condition-subtext" id="conditionSubtext">पूरी पेटी सुरक्षित और सामान्य है</span>
+            </div>
+            <div class="condition-score-badge" id="conditionScoreBadge">
+              <span class="score-num" id="conditionScore">94</span><span class="score-pct">%</span>
+            </div>
+          </div>
+
+          <!-- The Core Green to Red Line Meter Indicator -->
+          <div class="gauge-container">
+            <div class="gauge-labels-row">
+              <span class="gauge-label-start" data-i18n="safeLabel">🟢 बढ़िया (Safe)</span>
+              <span class="gauge-label-mid" data-i18n="warningLabel">🟡 ध्यान दें (Check)</span>
+              <span class="gauge-label-end" data-i18n="dangerLabel">🔴 खतरा (Alert)</span>
+            </div>
+            <!-- Visual Multi-gradient track -->
+            <div class="health-gradient-track">
+              <div class="health-indicator-cursor" id="healthCursor" style="left: 12%;">
+                <div class="cursor-pointer"></div>
+                <div class="cursor-bubble" id="cursorBubble">94%</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Farmer One-Liner Tip -->
+          <div class="farmer-tip-box" id="farmerTipBox">
+            <span class="tip-icon">💡</span>
+            <span class="tip-text" id="farmerTipText">तापमान और नमी मधुमक्खियों के अनुकूल है।</span>
+          </div>
+        </section>
+
+        <!-- 2. HONEY HARVEST COUNTDOWN & EXPECTED QUANTITY -->
+        <section class="harvest-hero-card" id="harvestSection">
+          <div class="harvest-card-title">
+            <span class="harvest-icon">🍯</span>
+            <h3 data-i18n="honeyForecast">शहद तैयार होने का अनुमान (Honey Forecast)</h3>
+          </div>
+          
+          <div class="harvest-split-grid">
+            <!-- Honey Ready Days -->
+            <div class="harvest-box days-box">
+              <div class="harvest-ring-wrap">
+                <svg class="progress-ring" width="96" height="96">
+                  <circle class="ring-bg" stroke="#FDE68A" stroke-width="8" fill="transparent" r="40" cx="48" cy="48"/>
+                  <circle class="ring-progress" id="harvestProgressCircle" stroke="#F59E0B" stroke-width="8" stroke-linecap="round" fill="transparent" r="40" cx="48" cy="48"/>
+                </svg>
+                <div class="ring-center-content">
+                  <span class="ring-number" id="harvestDaysNumber">9</span>
+                  <span class="ring-unit" data-i18n="daysUnit">दिन</span>
+                </div>
+              </div>
+              <div class="harvest-text-info">
+                <span class="harvest-stat-label" data-i18n="harvestDaysLabel">तैयार होने में बाकी</span>
+                <span class="harvest-status-pill" id="harvestStatusPill">शीघ्र पकने वाला</span>
+              </div>
+            </div>
+
+            <!-- Expected Quantity -->
+            <div class="harvest-box qty-box">
+              <div class="honey-jar-visual">
+                <div class="jar-outline">
+                  <div class="jar-honey-fill" id="jarHoneyFill" style="height: 75%;">
+                    <div class="honey-wave"></div>
+                  </div>
+                  <span class="jar-icon-overlay">🍯</span>
+                </div>
+              </div>
+              <div class="harvest-text-info">
+                <span class="harvest-stat-label" data-i18n="expectedQtyLabel">अनुमानित शहद वजन</span>
+                <div class="big-qty-number">
+                  <span id="honeyQtyNumber">8.5</span> <span class="kg-unit" data-i18n="kgUnit">किलो (kg)</span>
+                </div>
+                <span class="market-value-estimate" id="marketValueText">अनुमानित मूल्य: ₹2,550</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- 3. DETAILED LIVE METRICS GRID -->
+      <section class="metrics-section" id="metricsSection">
+        <div class="section-header-row">
+          <h3 class="section-title" data-i18n="liveSensorsTitle">पेटी के मुख्य माप (Live Hive Readings)</h3>
+          <span class="section-subtitle" data-i18n="liveSensorsSubtitle">आईओटी सेंसर द्वारा हर ३० सेकंड में अपडेट</span>
+        </div>
+
+        <div class="metrics-grid">
+          <!-- Temperature Card -->
+          <div class="metric-card" id="cardTemp">
+            <div class="metric-card-header">
+              <div class="metric-icon-bubble temp-bg">
+                <span>🌡️</span>
+              </div>
+              <span class="metric-status-badge status-good" id="tempBadge" data-i18n="normalStatus">सामान्य (Normal)</span>
+            </div>
+            <span class="metric-name" data-i18n="tempTitle">तापमान (Temperature)</span>
+            <div class="metric-value-row">
+              <span class="metric-val" id="tempValue">34.5</span>
+              <span class="metric-unit">°C</span>
+            </div>
+            <!-- Visual Meter Bar -->
+            <div class="mini-range-track">
+              <div class="range-fill temp-fill" id="tempRangeFill" style="width: 70%;"></div>
+            </div>
+            <span class="metric-target-hint" data-i18n="tempIdealHint">उचित सीमा: 33°C - 36°C</span>
+          </div>
+
+          <!-- Humidity & Moisture Card -->
+          <div class="metric-card" id="cardHumidity">
+            <div class="metric-card-header">
+              <div class="metric-icon-bubble hum-bg">
+                <span>💧</span>
+              </div>
+              <span class="metric-status-badge status-good" id="humidityBadge" data-i18n="normalStatus">सामान्य (Normal)</span>
+            </div>
+            <span class="metric-name" data-i18n="humidityTitle">नमी (Moisture / Humidity)</span>
+            <div class="metric-value-row">
+              <span class="metric-val" id="humidityValue">58</span>
+              <span class="metric-unit">% RH</span>
+            </div>
+            <div class="mini-range-track">
+              <div class="range-fill hum-fill" id="humidityRangeFill" style="width: 58%;"></div>
+            </div>
+            <span class="metric-target-hint" data-i18n="humidityIdealHint">उचित सीमा: 50% - 65%</span>
+          </div>
+
+          <!-- Disease & Pest Card -->
+          <div class="metric-card" id="cardDisease">
+            <div class="metric-card-header">
+              <div class="metric-icon-bubble disease-bg" id="diseaseIconWrap">
+                <span id="diseaseIcon">🛡️</span>
+              </div>
+              <span class="metric-status-badge status-good" id="diseaseBadge" data-i18n="noDisease">रोग मुक्त (Clean)</span>
+            </div>
+            <span class="metric-name" data-i18n="diseaseTitle">रोग और कीट जांच (Disease Status)</span>
+            <div class="disease-content-row">
+              <div class="disease-name-label" id="diseaseName">कोई रोग नहीं - पेटी सुरक्षित है</div>
+              <button class="remedy-action-btn hidden" id="remedyBtn" data-i18n="remedyBtn">उपचार देखें ➔</button>
+            </div>
+            <div class="disease-remedy-preview" id="diseaseRemedyPreview">
+              ✅ कोई वरोआ माइट (Mites) या फफूंदी नहीं मिली। रानी मक्खी सुरक्षित है।
+            </div>
+          </div>
+
+          <!-- Bee Activity / Status Card -->
+          <div class="metric-card" id="cardBeeStatus">
+            <div class="metric-card-header">
+              <div class="metric-icon-bubble bee-bg">
+                <span class="flying-bee">🐝</span>
+              </div>
+              <span class="metric-status-badge status-active" id="beeStatusBadge" data-i18n="activeStatus">बहुत सक्रिय (Active)</span>
+            </div>
+            <span class="metric-name" data-i18n="colonyTitle">मक्खियों की गतिविधि (Bee Activity)</span>
+            <div class="bee-activity-details">
+              <div class="bee-status-headline" id="beeStatusHeadline">रानी सक्रिय • पराग लाना जारी</div>
+              <div class="bee-sound-meter">
+                <span class="sound-frequency-tag" id="hiveSound">ध्वनि: 180 Hz (शांत)</span>
+              </div>
+            </div>
+            <div class="bee-behavior-bar">
+              <div class="behavior-chip active" id="chipForaging" data-i18n="chipForaging">🌸 पराग संचय (Foraging)</div>
+              <div class="behavior-chip active" id="chipQueen" data-i18n="chipQueen">👑 रानी सुरक्षित</div>
+              <div class="behavior-chip" id="chipSwarm" data-i18n="chipSwarm">⚠️ झुंड खतरा: ना के बराबर</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. BOTTOM DUAL SECTION: SUPPORT & DEMO CONTROLLER -->
+      <div class="bottom-dual-row" id="supportSection">
+        
+        <!-- QUICK HELP & KVIC EXPERT ASSISTANCE -->
+        <section class="support-section">
+          <div class="support-card">
+            <div class="support-icon">📞</div>
+            <div class="support-info">
+              <h4 data-i18n="needHelpTitle">मदद चाहिए? KVIC विशेषज्ञ से बात करें</h4>
+              <p data-i18n="needHelpDesc">मुफ्त परामर्श, रोग निदान एवं शहद बिक्री सहायता</p>
+              <div class="support-meta">
+                <span class="badge-tollfree" data-i18n="tollFreeLabel">टोल फ्री नंबर: 1800-180-1551</span>
+                <span class="badge-timing" data-i18n="timingLabel">सुबह ९:०० से शाम ६:०० बजे</span>
+              </div>
+            </div>
+            <a href="tel:18001801551" class="call-expert-btn" id="callExpertBtn">
+              <span data-i18n="callBtn">📞 कॉल करें</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- TEST & SIMULATION DRAWER -->
+        <section class="demo-controller-card">
+          <div class="demo-header" id="demoToggleHeader">
+            <div class="demo-title">
+              <span>⚙️</span>
+              <h4 data-i18n="demoTitle">सेंसर टेस्ट टूल (Demo Simulation)</h4>
+            </div>
+            <span class="toggle-arrow" id="demoArrow">▼</span>
+          </div>
+          <div class="demo-body" id="demoBody">
+            <p class="demo-hint" data-i18n="demoHint">अलग-अलग स्थिति की जांच के लिए बटन दबाएं:</p>
+            <div class="demo-buttons-grid">
+              <button class="demo-btn green-btn" data-scenario="healthy" data-i18n="demoNormal">🟢 सब सामान्य (Normal)</button>
+              <button class="demo-btn yellow-btn" data-scenario="highTemp" data-i18n="demoHeat">🟡 तेज गर्मी (38°C Heat)</button>
+              <button class="demo-btn red-btn" data-scenario="disease" data-i18n="demoDisease">🔴 वरोआ रोग (Disease Alert)</button>
+              <button class="demo-btn gold-btn" data-scenario="harvestReady" data-i18n="demoHarvest">🍯 शहद तैयार (Ready!)</button>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+    </main>
+
+    <!-- Disease Remediation Modal (Clean Desktop Dialog) -->
+    <div class="modal-backdrop hidden" id="remedyModal">
+      <div class="modal-card">
+        <div class="modal-head">
+          <span class="modal-alert-icon">⚠️</span>
+          <div>
+            <h3 id="modalTitle">रोग निवारण निर्देश</h3>
+            <span class="modal-sub" data-i18n="modalSub">KVIC प्रमाणित उपचार</span>
+          </div>
+          <button class="close-modal-btn" id="closeModalBtn" title="Close">✕</button>
+        </div>
+        <div class="modal-body" id="modalBodyText">
+          <!-- Dynamic remedies -->
+        </div>
+        <div class="modal-footer">
+          <button class="modal-action-btn" id="modalOkBtn" data-i18n="modalOk">समझ गया (OK)</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Delete Hive Confirmation Modal -->
+    <div class="modal-backdrop hidden" id="deleteHiveModal">
+      <div class="modal-card modal-delete-card">
+        <div class="modal-head modal-delete-head">
+          <span class="modal-alert-icon delete-icon">🗑️</span>
+          <div>
+            <h3 id="deleteModalTitle" data-i18n="deleteModalTitle">पेटी हटाएं (Delete Hive)</h3>
+            <span class="modal-sub" data-i18n="deleteModalSub">पुष्टि आवश्यक है • Confirmation Required</span>
+          </div>
+          <button class="close-modal-btn" id="closeDeleteModalBtn" title="Close">✕</button>
+        </div>
+        <div class="modal-body delete-modal-body">
+          <p class="delete-warning-text" id="deleteModalMessage" data-i18n="deletePrompt">
+            क्या आप वाकई इस पेटी को हटाना चाहते हैं?
+          </p>
+          <div class="delete-hive-preview-box">
+            <span class="delete-hive-badge" id="deleteHiveBadgeName">पेटी १</span>
+            <span class="delete-hive-note" data-i18n="deleteIrreversible">यह क्रिया पूर्ववत नहीं की जा सकती (Cannot be undone)</span>
+          </div>
+        </div>
+        <div class="modal-footer delete-modal-footer">
+          <button class="modal-cancel-btn" id="cancelDeleteBtn" data-i18n="cancelBtn">रद्द करें (Cancel)</button>
+          <button class="modal-confirm-delete-btn" id="confirmDeleteBtn" data-i18n="confirmDeleteBtn">हटाने की पुष्टि करें (Confirm Delete)</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add New Hive Box Modal -->
+    <div class="modal-backdrop hidden" id="addHiveModal">
+      <div class="modal-card modal-form-card">
+        <div class="modal-head modal-add-head">
+          <span class="modal-alert-icon add-box-icon">📦</span>
+          <div>
+            <h3 id="addHiveModalTitle" data-i18n="addHiveModalTitle">नया बॉक्स जोड़ें (Add New Hive Box)</h3>
+            <span class="modal-sub" data-i18n="addHiveModalSub">पेटी का नाम और स्थापना तिथि दर्ज करें</span>
+          </div>
+          <button class="close-modal-btn" id="closeAddHiveModalBtn" title="Close">✕</button>
+        </div>
+        <form id="addHiveForm" onsubmit="return false;">
+          <div class="modal-body add-hive-modal-body">
+            <div class="form-group">
+              <label for="newHiveNameInput" class="form-label" data-i18n="hiveNameLabel">पेटी का नाम (Hive Box Name):</label>
+              <input 
+                type="text" 
+                id="newHiveNameInput" 
+                class="form-input" 
+                placeholder="उदा. पेटी ४ (सरसों खेत) / Hive 4" 
+                required 
+                autocomplete="off"
+              />
+              <span class="form-help-hint" data-i18n="hiveNameHint">पहचान के लिए स्थान या फसल का नाम लिख सकते हैं</span>
+            </div>
+            <div class="form-group">
+              <label for="newHiveDateInput" class="form-label" data-i18n="initiatedDateLabel">स्थापना तिथि (Initiation Date):</label>
+              <input 
+                type="date" 
+                id="newHiveDateInput" 
+                class="form-input" 
+                required 
+              />
+              <span class="form-help-hint" data-i18n="hiveDateHint">जिस दिन यह पेटी खेत में स्थापित की गई थी</span>
+            </div>
+          </div>
+          <div class="modal-footer add-hive-modal-footer">
+            <button type="button" class="modal-cancel-btn" id="cancelAddHiveBtn" data-i18n="cancelBtn">रद्द करें (Cancel)</button>
+            <button type="submit" class="modal-confirm-add-btn" id="confirmAddHiveBtn" data-i18n="addBoxConfirmBtn">+ पेटी जोड़ें (Add Box)</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- All Hive Boxes Selector Modal -->
+    <div class="modal-backdrop hidden" id="selectHiveModal">
+      <div class="modal-card modal-boxes-card">
+        <div class="modal-head">
+          <span class="modal-alert-icon box-list-icon">📦</span>
+          <div>
+            <h3 data-i18n="allHivesModalTitle">आपकी पेटियाँ (All Hive Boxes)</h3>
+            <span class="modal-sub" data-i18n="allHivesModalSub">देखने के लिए किसी भी पेटी पर टैप करें (Tap to select)</span>
+          </div>
+          <button class="close-modal-btn" id="closeSelectHiveModalBtn" title="Close">✕</button>
+        </div>
+        <div class="modal-body select-hive-modal-body">
+          <div class="all-hives-list" id="allHivesModalList">
+            <!-- Populated dynamically via JS -->
+          </div>
+        </div>
+        <div class="modal-footer select-hive-modal-footer">
+          <button type="button" class="modal-add-from-list-btn" id="addNewHiveFromListBtn">
+            <span>➕</span>
+            <span data-i18n="addHiveBtn">+ नया बॉक्स जोड़ें (Add Box)</span>
+          </button>
+          <button type="button" class="modal-cancel-btn" id="closeSelectHiveModalFooterBtn" data-i18n="closeBtn">बंद करें (Close)</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Beekeeper Profile Modal -->
+    <div class="modal-backdrop hidden" id="userProfileModal">
+      <div class="modal-card modal-profile-card">
+        <div class="modal-head">
+          <div class="profile-modal-avatar">👨‍🌾</div>
+          <div>
+            <h3>मधुमक्खी पालक प्रोफ़ाइल (Beekeeper Profile)</h3>
+            <span class="modal-sub">KVIC राष्ट्रीय मधुमक्खी मिशन • National Honey Mission</span>
+          </div>
+          <button class="close-modal-btn" id="closeProfileModalBtn" title="Close">✕</button>
+        </div>
+        <div class="modal-body profile-modal-body">
+          <div class="profile-info-grid">
+            <div class="profile-info-row">
+              <span class="profile-field-label">पालक का नाम (Name):</span>
+              <strong class="profile-field-val">राम कुमार (Ram Kumar)</strong>
+            </div>
+            <div class="profile-info-row">
+              <span class="profile-field-label">KVIC पंजीयन संख्या (ID):</span>
+              <strong class="profile-field-val badge-id">KVIC-UP-2026-8841</strong>
+            </div>
+            <div class="profile-info-row">
+              <span class="profile-field-label">स्थान (Location):</span>
+              <strong class="profile-field-val">सहारनपुर, उत्तर प्रदेश (UP)</strong>
+            </div>
+            <div class="profile-info-row">
+              <span class="profile-field-label">सक्रिय पेटियाँ (Active Boxes):</span>
+              <strong class="profile-field-val" id="profileHiveCount">3 पेटियाँ (Active)</strong>
+            </div>
+            <div class="profile-info-row">
+              <span class="profile-field-label">मिशन प्रमाणन (Status):</span>
+              <span class="profile-status-certified">✓ प्रमाणित पालक (Certified Beekeeper)</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="modal-cancel-btn" id="closeProfileModalFooterBtn" style="width: 100%;">बंद करें (Close)</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script type="module" src="firebase-config.js"></script>
+  <script src="app.js?v=3.4"></script>
+</body>
+</html>
