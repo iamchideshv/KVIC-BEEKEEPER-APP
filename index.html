@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +8,506 @@
   <!-- Google Fonts: Outfit & Indian Scripts (Hindi, Tamil, Telugu, Kannada, Malayalam) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700;800&family=Noto+Sans+Tamil:wght@400;600;700;800&family=Noto+Sans+Telugu:wght@400;600;700;800&family=Noto+Sans+Kannada:wght@400;600;700;800&family=Noto+Sans+Malayalam:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=3.4">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700;800&family=Noto+Sans+Tamil:wght@400;600;700;800&family=Noto+Sans+Telugu:wght@400;600;700;800&family=Noto+Sans+Kannada:wght@400;600;700;800&family=Noto+Sans+Malayalam:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=4.0">
+  <script src="lottie.min.js"></script>
+  <script src="lottie-init.js"></script>
 </head>
+
 <body>
+
+  <!-- ==========================================================================
+       STARTING WELCOME SCREEN: LANGUAGE SELECTION (SINGLE PAGE, NON-SCROLLABLE)
+       ========================================================================== -->
+  <div class="lang-starter-screen" id="langStarterScreen" aria-modal="true" role="dialog" aria-labelledby="starterSectionTitle">
+    <div class="lang-starter-backdrop">
+      <div class="honeycomb-decor-1"></div>
+      <div class="honeycomb-decor-2"></div>
+      <div class="honeycomb-decor-grid"></div>
+    </div>
+
+    <div class="lang-starter-container">
+      
+      <!-- Top Center App Name & Emblem -->
+      <div class="starter-top-brand">
+        <div class="starter-emblem-wrap">
+          <svg class="bee-vector-svg" viewBox="0 0 44 44" width="34" height="34" fill="none" shape-rendering="geometricPrecision">
+            <ellipse cx="14" cy="15" rx="9" ry="6" transform="rotate(-30 14 15)" fill="rgba(255, 255, 255, 0.9)" stroke="#94A3B8" stroke-width="1.2"/>
+            <ellipse cx="30" cy="15" rx="9" ry="6" transform="rotate(30 30 15)" fill="rgba(255, 255, 255, 0.9)" stroke="#94A3B8" stroke-width="1.2"/>
+            <path d="M12 16C15 13 18 14 20 17" stroke="#94A3B8" stroke-width="0.8" stroke-linecap="round"/>
+            <path d="M32 16C29 13 26 14 24 17" stroke="#94A3B8" stroke-width="0.8" stroke-linecap="round"/>
+            <ellipse cx="22" cy="25" rx="12" ry="14" fill="#F59E0B"/>
+            <path d="M11 22C14 23.5 30 23.5 33 22C33.5 24 33.5 25.5 33 26.5C30 28 14 28 11 26.5C10.5 25.5 10.5 24 11 22Z" fill="#1E293B"/>
+            <path d="M12.5 30C15 31.5 29 31.5 31.5 30C31 31.5 30 33 28.5 34.2C25 35.5 19 35.5 15.5 34.2C14 33 13 31.5 12.5 30Z" fill="#1E293B"/>
+            <circle cx="22" cy="13" r="6" fill="#1E293B"/>
+            <circle cx="19.5" cy="12" r="1.4" fill="#FFFFFF"/>
+            <circle cx="24.5" cy="12" r="1.4" fill="#FFFFFF"/>
+            <circle cx="19.8" cy="12" r="0.7" fill="#0F172A"/>
+            <circle cx="24.8" cy="12" r="0.7" fill="#0F172A"/>
+            <path d="M20 9C19 6 16 6 15 7" stroke="#1E293B" stroke-width="1.2" stroke-linecap="round"/>
+            <circle cx="15" cy="7" r="1" fill="#D97706"/>
+            <path d="M24 9C25 6 28 6 29 7" stroke="#1E293B" stroke-width="1.2" stroke-linecap="round"/>
+            <circle cx="29" cy="7" r="1" fill="#D97706"/>
+            <path d="M20.5 38.5L22 41L23.5 38.5Z" fill="#1E293B"/>
+          </svg>
+        </div>
+        <h1 class="starter-app-title">KVIC <span class="title-highlight">BEE MITRA</span></h1>
+      </div>
+
+      <!-- Main Language Section (Header sits directly above English card) -->
+      <div class="starter-main-section">
+        <div class="starter-lang-header">
+          <h2 class="starter-section-title" id="starterSectionTitle">What is your language?</h2>
+        </div>
+
+        <!-- Language List (Single view, high quality cards) -->
+        <div class="starter-lang-list" id="starterLangList" role="radiogroup">
+        
+        <!-- English -->
+        <button class="starter-lang-card" data-lang="en" type="button" role="radio" aria-checked="false">
+          <div class="starter-flag-box">
+            <svg class="starter-flag-svg" viewBox="0 0 60 60">
+              <defs>
+                <clipPath id="starterClipUK">
+                  <circle cx="30" cy="30" r="30"/>
+                </clipPath>
+              </defs>
+              <g clip-path="url(#starterClipUK)">
+                <rect width="60" height="60" fill="#012169"/>
+                <path d="M0,0 L60,60 M60,0 L0,60" stroke="#ffffff" stroke-width="12"/>
+                <path d="M0,0 L60,60 M60,0 L0,60" stroke="#C8102E" stroke-width="6"/>
+                <path d="M30,0 v60 M0,30 h60" stroke="#ffffff" stroke-width="16"/>
+                <path d="M30,0 v60 M0,30 h60" stroke="#C8102E" stroke-width="10"/>
+              </g>
+              <circle cx="30" cy="30" r="29.5" fill="none" stroke="rgba(0,0,0,0.12)" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="starter-lang-names">
+            <span class="starter-primary-name">English</span>
+            <span class="starter-secondary-name">Default • All Regions</span>
+          </div>
+          <div class="starter-check-circle">
+            <svg class="starter-check-svg" viewBox="0 0 20 20" fill="none">
+              <path d="M16.5 5.5L7.5 14.5L3.5 10.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </button>
+
+        <!-- Hindi -->
+        <button class="starter-lang-card" data-lang="hi" type="button" role="radio" aria-checked="false">
+          <div class="starter-flag-box">
+            <svg class="starter-flag-svg" viewBox="0 0 60 60">
+              <defs>
+                <clipPath id="starterClipIN_hi">
+                  <circle cx="30" cy="30" r="30"/>
+                </clipPath>
+              </defs>
+              <g clip-path="url(#starterClipIN_hi)">
+                <rect width="60" height="20" fill="#FF9933"/>
+                <rect y="20" width="60" height="20" fill="#FFFFFF"/>
+                <rect y="40" width="60" height="20" fill="#138808"/>
+                <circle cx="30" cy="30" r="7.5" fill="none" stroke="#000080" stroke-width="1.2"/>
+                <circle cx="30" cy="30" r="1.5" fill="#000080"/>
+                <g stroke="#000080" stroke-width="0.75">
+                  <line x1="30" y1="22.5" x2="30" y2="37.5"/>
+                  <line x1="22.5" y1="30" x2="37.5" y2="30"/>
+                  <line x1="24.7" y1="24.7" x2="35.3" y2="35.3"/>
+                  <line x1="24.7" y1="35.3" x2="35.3" y2="24.7"/>
+                  <line x1="27.1" y1="22.9" x2="32.9" y2="37.1"/>
+                  <line x1="22.9" y1="27.1" x2="37.1" y2="32.9"/>
+                  <line x1="32.9" y1="22.9" x2="27.1" y2="37.1"/>
+                  <line x1="37.1" y1="27.1" x2="22.9" y2="32.9"/>
+                </g>
+              </g>
+              <circle cx="30" cy="30" r="29.5" fill="none" stroke="rgba(0,0,0,0.12)" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="starter-lang-names">
+            <span class="starter-primary-name">हिंदी</span>
+            <span class="starter-secondary-name">Hindi</span>
+          </div>
+          <div class="starter-check-circle">
+            <svg class="starter-check-svg" viewBox="0 0 20 20" fill="none">
+              <path d="M16.5 5.5L7.5 14.5L3.5 10.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </button>
+
+        <!-- Tamil -->
+        <button class="starter-lang-card" data-lang="ta" type="button" role="radio" aria-checked="false">
+          <div class="starter-flag-box">
+            <svg class="starter-flag-svg" viewBox="0 0 60 60">
+              <defs>
+                <clipPath id="starterClipIN_ta">
+                  <circle cx="30" cy="30" r="30"/>
+                </clipPath>
+              </defs>
+              <g clip-path="url(#starterClipIN_ta)">
+                <rect width="60" height="20" fill="#FF9933"/>
+                <rect y="20" width="60" height="20" fill="#FFFFFF"/>
+                <rect y="40" width="60" height="20" fill="#138808"/>
+                <circle cx="30" cy="30" r="7.5" fill="none" stroke="#000080" stroke-width="1.2"/>
+                <circle cx="30" cy="30" r="1.5" fill="#000080"/>
+                <g stroke="#000080" stroke-width="0.75">
+                  <line x1="30" y1="22.5" x2="30" y2="37.5"/>
+                  <line x1="22.5" y1="30" x2="37.5" y2="30"/>
+                  <line x1="24.7" y1="24.7" x2="35.3" y2="35.3"/>
+                  <line x1="24.7" y1="35.3" x2="35.3" y2="24.7"/>
+                  <line x1="27.1" y1="22.9" x2="32.9" y2="37.1"/>
+                  <line x1="22.9" y1="27.1" x2="37.1" y2="32.9"/>
+                  <line x1="32.9" y1="22.9" x2="27.1" y2="37.1"/>
+                  <line x1="37.1" y1="27.1" x2="22.9" y2="32.9"/>
+                </g>
+              </g>
+              <circle cx="30" cy="30" r="29.5" fill="none" stroke="rgba(0,0,0,0.12)" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="starter-lang-names">
+            <span class="starter-primary-name">தமிழ்</span>
+            <span class="starter-secondary-name">Tamil</span>
+          </div>
+          <div class="starter-check-circle">
+            <svg class="starter-check-svg" viewBox="0 0 20 20" fill="none">
+              <path d="M16.5 5.5L7.5 14.5L3.5 10.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </button>
+
+        <!-- Telugu -->
+        <button class="starter-lang-card" data-lang="te" type="button" role="radio" aria-checked="false">
+          <div class="starter-flag-box">
+            <svg class="starter-flag-svg" viewBox="0 0 60 60">
+              <defs>
+                <clipPath id="starterClipIN_te">
+                  <circle cx="30" cy="30" r="30"/>
+                </clipPath>
+              </defs>
+              <g clip-path="url(#starterClipIN_te)">
+                <rect width="60" height="20" fill="#FF9933"/>
+                <rect y="20" width="60" height="20" fill="#FFFFFF"/>
+                <rect y="40" width="60" height="20" fill="#138808"/>
+                <circle cx="30" cy="30" r="7.5" fill="none" stroke="#000080" stroke-width="1.2"/>
+                <circle cx="30" cy="30" r="1.5" fill="#000080"/>
+                <g stroke="#000080" stroke-width="0.75">
+                  <line x1="30" y1="22.5" x2="30" y2="37.5"/>
+                  <line x1="22.5" y1="30" x2="37.5" y2="30"/>
+                  <line x1="24.7" y1="24.7" x2="35.3" y2="35.3"/>
+                  <line x1="24.7" y1="35.3" x2="35.3" y2="24.7"/>
+                  <line x1="27.1" y1="22.9" x2="32.9" y2="37.1"/>
+                  <line x1="22.9" y1="27.1" x2="37.1" y2="32.9"/>
+                  <line x1="32.9" y1="22.9" x2="27.1" y2="37.1"/>
+                  <line x1="37.1" y1="27.1" x2="22.9" y2="32.9"/>
+                </g>
+              </g>
+              <circle cx="30" cy="30" r="29.5" fill="none" stroke="rgba(0,0,0,0.12)" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="starter-lang-names">
+            <span class="starter-primary-name">తెలుగు</span>
+            <span class="starter-secondary-name">Telugu</span>
+          </div>
+          <div class="starter-check-circle">
+            <svg class="starter-check-svg" viewBox="0 0 20 20" fill="none">
+              <path d="M16.5 5.5L7.5 14.5L3.5 10.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </button>
+
+        <!-- Kannada -->
+        <button class="starter-lang-card" data-lang="kn" type="button" role="radio" aria-checked="false">
+          <div class="starter-flag-box">
+            <svg class="starter-flag-svg" viewBox="0 0 60 60">
+              <defs>
+                <clipPath id="starterClipIN_kn">
+                  <circle cx="30" cy="30" r="30"/>
+                </clipPath>
+              </defs>
+              <g clip-path="url(#starterClipIN_kn)">
+                <rect width="60" height="20" fill="#FF9933"/>
+                <rect y="20" width="60" height="20" fill="#FFFFFF"/>
+                <rect y="40" width="60" height="20" fill="#138808"/>
+                <circle cx="30" cy="30" r="7.5" fill="none" stroke="#000080" stroke-width="1.2"/>
+                <circle cx="30" cy="30" r="1.5" fill="#000080"/>
+                <g stroke="#000080" stroke-width="0.75">
+                  <line x1="30" y1="22.5" x2="30" y2="37.5"/>
+                  <line x1="22.5" y1="30" x2="37.5" y2="30"/>
+                  <line x1="24.7" y1="24.7" x2="35.3" y2="35.3"/>
+                  <line x1="24.7" y1="35.3" x2="35.3" y2="24.7"/>
+                  <line x1="27.1" y1="22.9" x2="32.9" y2="37.1"/>
+                  <line x1="22.9" y1="27.1" x2="37.1" y2="32.9"/>
+                  <line x1="32.9" y1="22.9" x2="27.1" y2="37.1"/>
+                  <line x1="37.1" y1="27.1" x2="22.9" y2="32.9"/>
+                </g>
+              </g>
+              <circle cx="30" cy="30" r="29.5" fill="none" stroke="rgba(0,0,0,0.12)" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="starter-lang-names">
+            <span class="starter-primary-name">ಕನ್ನಡ</span>
+            <span class="starter-secondary-name">Kannada</span>
+          </div>
+          <div class="starter-check-circle">
+            <svg class="starter-check-svg" viewBox="0 0 20 20" fill="none">
+              <path d="M16.5 5.5L7.5 14.5L3.5 10.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </button>
+
+        <!-- Malayalam -->
+        <button class="starter-lang-card" data-lang="ml" type="button" role="radio" aria-checked="false">
+          <div class="starter-flag-box">
+            <svg class="starter-flag-svg" viewBox="0 0 60 60">
+              <defs>
+                <clipPath id="starterClipIN_ml">
+                  <circle cx="30" cy="30" r="30"/>
+                </clipPath>
+              </defs>
+              <g clip-path="url(#starterClipIN_ml)">
+                <rect width="60" height="20" fill="#FF9933"/>
+                <rect y="20" width="60" height="20" fill="#FFFFFF"/>
+                <rect y="40" width="60" height="20" fill="#138808"/>
+                <circle cx="30" cy="30" r="7.5" fill="none" stroke="#000080" stroke-width="1.2"/>
+                <circle cx="30" cy="30" r="1.5" fill="#000080"/>
+                <g stroke="#000080" stroke-width="0.75">
+                  <line x1="30" y1="22.5" x2="30" y2="37.5"/>
+                  <line x1="22.5" y1="30" x2="37.5" y2="30"/>
+                  <line x1="24.7" y1="24.7" x2="35.3" y2="35.3"/>
+                  <line x1="24.7" y1="35.3" x2="35.3" y2="24.7"/>
+                  <line x1="27.1" y1="22.9" x2="32.9" y2="37.1"/>
+                  <line x1="22.9" y1="27.1" x2="37.1" y2="32.9"/>
+                  <line x1="32.9" y1="22.9" x2="27.1" y2="37.1"/>
+                  <line x1="37.1" y1="27.1" x2="22.9" y2="32.9"/>
+                </g>
+              </g>
+              <circle cx="30" cy="30" r="29.5" fill="none" stroke="rgba(0,0,0,0.12)" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="starter-lang-names">
+            <span class="starter-primary-name">മലയാളം</span>
+            <span class="starter-secondary-name">Malayalam</span>
+          </div>
+          <div class="starter-check-circle">
+            <svg class="starter-check-svg" viewBox="0 0 20 20" fill="none">
+              <path d="M16.5 5.5L7.5 14.5L3.5 10.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </button>
+
+      </div>
+    </div>
+
+      <!-- Bottom Confirm Section -->
+      <div class="starter-bottom-action">
+        <button class="starter-confirm-btn" id="starterConfirmBtn" type="button">
+          <span class="starter-confirm-label" id="starterConfirmLabel">Confirm</span>
+          <span class="starter-confirm-sub" id="starterConfirmSub">आगे बढ़ें</span>
+          <span class="starter-confirm-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+        </button>
+        <p class="starter-gov-footnote">
+          🇮🇳 खादी और ग्रामोद्योग आयोग • Ministry of MSME, Govt. of India
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       LOGIN & OTP VERIFICATION SCREEN (THEMED FOR KVIC BEE MITRA)
+       ========================================================================== -->
+  <div class="auth-screen hidden" id="authScreen" aria-modal="true" role="dialog">
+    <div class="auth-backdrop">
+      <div class="honeycomb-decor-1"></div>
+      <div class="honeycomb-decor-2"></div>
+      <div class="honeycomb-decor-grid"></div>
+    </div>
+
+    <div class="auth-container">
+      
+      <!-- STEP 1: Name & Phone Number Login -->
+      <div class="auth-step-pane active" id="authStepPhone">
+        <!-- Top Center Brand -->
+        <div class="auth-top-brand">
+          <div class="auth-emblem-wrap">
+            <svg class="bee-vector-svg" viewBox="0 0 44 44" width="34" height="34" fill="none" shape-rendering="geometricPrecision">
+              <ellipse cx="14" cy="15" rx="9" ry="6" transform="rotate(-30 14 15)" fill="rgba(255, 255, 255, 0.9)" stroke="#94A3B8" stroke-width="1.2"/>
+              <ellipse cx="30" cy="15" rx="9" ry="6" transform="rotate(30 30 15)" fill="rgba(255, 255, 255, 0.9)" stroke="#94A3B8" stroke-width="1.2"/>
+              <path d="M12 16C15 13 18 14 20 17" stroke="#94A3B8" stroke-width="0.8" stroke-linecap="round"/>
+              <path d="M32 16C29 13 26 14 24 17" stroke="#94A3B8" stroke-width="0.8" stroke-linecap="round"/>
+              <ellipse cx="22" cy="25" rx="12" ry="14" fill="#F59E0B"/>
+              <path d="M11 22C14 23.5 30 23.5 33 22C33.5 24 33.5 25.5 33 26.5C30 28 14 28 11 26.5C10.5 25.5 10.5 24 11 22Z" fill="#1E293B"/>
+              <path d="M12.5 30C15 31.5 29 31.5 31.5 30C31 31.5 30 33 28.5 34.2C25 35.5 19 35.5 15.5 34.2C14 33 13 31.5 12.5 30Z" fill="#1E293B"/>
+              <circle cx="22" cy="13" r="6" fill="#1E293B"/>
+              <circle cx="19.5" cy="12" r="1.4" fill="#FFFFFF"/>
+              <circle cx="24.5" cy="12" r="1.4" fill="#FFFFFF"/>
+              <circle cx="19.8" cy="12" r="0.7" fill="#0F172A"/>
+              <circle cx="24.8" cy="12" r="0.7" fill="#0F172A"/>
+              <path d="M20 9C19 6 16 6 15 7" stroke="#1E293B" stroke-width="1.2" stroke-linecap="round"/>
+              <circle cx="15" cy="7" r="1" fill="#D97706"/>
+              <path d="M24 9C25 6 28 6 29 7" stroke="#1E293B" stroke-width="1.2" stroke-linecap="round"/>
+              <circle cx="29" cy="7" r="1" fill="#D97706"/>
+              <path d="M20.5 38.5L22 41L23.5 38.5Z" fill="#1E293B"/>
+            </svg>
+          </div>
+          <h1 class="auth-app-title">KVIC <span class="title-highlight">BEE MITRA</span></h1>
+        </div>
+
+        <div class="auth-content-box">
+          <div class="auth-header-text">
+            <h2 class="auth-heading" id="authLoginHeading">Login to Your Account</h2>
+            <p class="auth-subheading" id="authLoginSubheading">Enter your name and mobile number</p>
+          </div>
+
+          <form class="auth-form" id="authPhoneForm" onsubmit="return false;">
+            <!-- Name Field -->
+            <div class="auth-field-group">
+              <label class="auth-field-label" for="authUserName">Beekeeper Name (नाम)</label>
+              <div class="auth-input-wrapper">
+                <svg class="auth-input-svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#64748B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                <input type="text" id="authUserName" class="auth-input" placeholder="e.g. Ram Kumar" value="Ram Kumar" required autocomplete="name" />
+              </div>
+            </div>
+
+            <!-- Phone Field -->
+            <div class="auth-field-group">
+              <label class="auth-field-label" for="authUserPhone">Phone Number (मोबाइल नंबर)</label>
+              <div class="auth-phone-input-wrapper">
+                <div class="auth-country-code">
+                  <svg class="auth-country-flag-svg" viewBox="0 0 60 60" width="22" height="22" shape-rendering="geometricPrecision">
+                    <defs>
+                      <clipPath id="authClipIN">
+                        <circle cx="30" cy="30" r="30"/>
+                      </clipPath>
+                    </defs>
+                    <g clip-path="url(#authClipIN)">
+                      <rect width="60" height="20" fill="#FF9933"/>
+                      <rect y="20" width="60" height="20" fill="#FFFFFF"/>
+                      <rect y="40" width="60" height="20" fill="#138808"/>
+                      <circle cx="30" cy="30" r="7.5" fill="none" stroke="#000080" stroke-width="1.2"/>
+                      <circle cx="30" cy="30" r="1.5" fill="#000080"/>
+                      <g stroke="#000080" stroke-width="0.75">
+                        <line x1="30" y1="22.5" x2="30" y2="37.5"/>
+                        <line x1="22.5" y1="30" x2="37.5" y2="30"/>
+                        <line x1="24.7" y1="24.7" x2="35.3" y2="35.3"/>
+                        <line x1="24.7" y1="35.3" x2="35.3" y2="24.7"/>
+                        <line x1="27.1" y1="22.9" x2="32.9" y2="37.1"/>
+                        <line x1="22.9" y1="27.1" x2="37.1" y2="32.9"/>
+                        <line x1="32.9" y1="22.9" x2="27.1" y2="37.1"/>
+                        <line x1="37.1" y1="27.1" x2="22.9" y2="32.9"/>
+                      </g>
+                    </g>
+                    <circle cx="30" cy="30" r="29.5" fill="none" stroke="rgba(0,0,0,0.15)" stroke-width="1"/>
+                  </svg>
+                  <span class="auth-dial-code">+91</span>
+                </div>
+                <input type="tel" id="authUserPhone" class="auth-input auth-phone-input" placeholder="98765 43210" value="9876543210" maxlength="10" required autocomplete="tel-national" />
+              </div>
+            </div>
+
+            <!-- Send OTP Button -->
+            <button type="button" class="auth-primary-btn" id="sendOtpBtn">
+              <span id="sendOtpBtnText">Send OTP</span>
+              <span class="auth-btn-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+            </button>
+          </form>
+
+          <div class="auth-footer-trust">
+            <span class="auth-trust-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> KVIC National Honey Mission • Official Farmer Access</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 2: 6-Digit OTP Verification -->
+      <div class="auth-step-pane" id="authStepOtp">
+        <!-- Top Nav Header with Back Arrow -->
+        <div class="auth-nav-bar">
+          <button type="button" class="auth-back-btn" id="authBackToPhoneBtn" title="Back">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <span class="auth-nav-title">Phone Verification</span>
+          <div style="width: 36px;"></div>
+        </div>
+
+        <div class="auth-content-box otp-box">
+          <div class="auth-otp-badge">
+            <svg class="auth-otp-svg" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#D97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              <line x1="8" y1="10" x2="16" y2="10"></line>
+              <line x1="8" y1="14" x2="12" y2="14"></line>
+            </svg>
+          </div>
+
+          <div class="auth-header-text text-center">
+            <h2 class="auth-heading" id="otpHeading">Enter Verification Code</h2>
+            <p class="auth-subheading" id="otpSubheading">
+              Enter 6 digit verification code sent to <strong id="otpDisplayPhone">+91 98765 43210</strong>
+            </p>
+          </div>
+
+          <!-- 6 OTP Boxes -->
+          <div class="otp-inputs-row" id="otpInputsRow">
+            <input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1" class="otp-digit" data-idx="0" />
+            <input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1" class="otp-digit" data-idx="1" />
+            <input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1" class="otp-digit" data-idx="2" />
+            <input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1" class="otp-digit" data-idx="3" />
+            <input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1" class="otp-digit" data-idx="4" />
+            <input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1" class="otp-digit" data-idx="5" />
+          </div>
+
+          <!-- Quick Autofill Demo Helper -->
+          <button type="button" class="otp-demo-fill-btn" id="otpDemoFillBtn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg> Quick Auto-Fill Demo OTP (123456)
+          </button>
+
+          <!-- Resend Code Row -->
+          <div class="otp-resend-row">
+            <span class="otp-resend-text">Didn't receive code?</span>
+            <button type="button" class="otp-resend-btn" id="resendOtpBtn" disabled>
+              Resend in <span id="resendTimer">30</span>s
+            </button>
+          </div>
+
+          <!-- Verify Button -->
+          <button type="button" class="auth-primary-btn" id="verifyOtpBtn">
+            <span id="verifyOtpBtnText">Verify & Continue</span>
+            <span class="auth-btn-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <div class="app-layout">
-    
+
     <!-- Top Modern Desktop Navbar -->
     <header class="app-navbar">
       <div class="nav-container">
-        
+
         <!-- Brand & Emblem -->
         <div class="brand-block">
           <div class="kvic-emblem">
-            <span class="emblem-icon">🐝</span>
+            <div class="header-bee-emblem" id="headerBeeWrap">
+            <svg class="bee-header-svg" viewBox="0 0 36 36" width="30" height="30" fill="none">
+              <ellipse cx="12" cy="11" rx="7" ry="4.5" transform="rotate(-30 12 11)" fill="rgba(255, 255, 255, 0.95)" stroke="#94A3B8" stroke-width="1"/>
+              <ellipse cx="24" cy="11" rx="7" ry="4.5" transform="rotate(30 24 11)" fill="rgba(255, 255, 255, 0.95)" stroke="#94A3B8" stroke-width="1"/>
+              <ellipse cx="18" cy="20" rx="9" ry="11" fill="#F59E0B"/>
+              <path d="M10 17C12 18.5 24 18.5 26 17C26.5 18.5 26.5 19.5 26 20.5C24 22 12 22 10 20.5Z" fill="#1E293B"/>
+              <path d="M11 23C13 24.5 23 24.5 25 23C24.5 24.5 23.5 25.5 22.5 26.5C20 27.5 16 27.5 13.5 26.5Z" fill="#1E293B"/>
+              <circle cx="18" cy="10" r="4.5" fill="#1E293B"/>
+              <circle cx="16.5" cy="9.5" r="1" fill="#FFFFFF"/>
+              <circle cx="19.5" cy="9.5" r="1" fill="#FFFFFF"/>
+              <path d="M16 6C15 4 13 4 12 5" stroke="#1E293B" stroke-width="1" stroke-linecap="round"/>
+              <path d="M20 6C21 4 23 4 24 5" stroke="#1E293B" stroke-width="1" stroke-linecap="round"/>
+              <path d="M17 31L18 33L19 31Z" fill="#1E293B"/>
+            </svg>
+          </div>
           </div>
           <div class="brand-text">
             <h1 class="brand-title">KVIC <span class="highlight">BEE MITRA</span></h1>
@@ -35,61 +522,21 @@
             <span data-i18n="liveSensorsBadge">सक्रिय सेंसर</span>
           </div>
 
-          <!-- Language Selector Dropdown -->
-          <div class="lang-dropdown-wrapper" id="langDropdownWrapper">
-            <button class="lang-btn" id="langToggleBtn" title="Choose Language / भाषा चुनें">
-              <span class="lang-flag" id="currentLangFlag">🇮🇳</span>
-              <span id="currentLangLabel">हिंदी</span>
-              <span class="dropdown-chevron">▾</span>
-            </button>
-            <div class="lang-dropdown-menu hidden" id="langDropdownMenu">
-              <button class="lang-option" data-lang="en">
-                <span class="opt-flag">🇬🇧</span>
-                <span class="opt-name">English</span>
-                <span class="opt-check">✓</span>
-              </button>
-              <button class="lang-option active" data-lang="hi">
-                <span class="opt-flag">🇮🇳</span>
-                <span class="opt-name">हिंदी (Hindi)</span>
-                <span class="opt-check">✓</span>
-              </button>
-              <button class="lang-option" data-lang="ta">
-                <span class="opt-flag">🇮🇳</span>
-                <span class="opt-name">தமிழ் (Tamil)</span>
-                <span class="opt-check">✓</span>
-              </button>
-              <button class="lang-option" data-lang="te">
-                <span class="opt-flag">🇮🇳</span>
-                <span class="opt-name">తెలుగు (Telugu)</span>
-                <span class="opt-check">✓</span>
-              </button>
-              <button class="lang-option" data-lang="kn">
-                <span class="opt-flag">🇮🇳</span>
-                <span class="opt-name">ಕನ್ನಡ (Kannada)</span>
-                <span class="opt-check">✓</span>
-              </button>
-              <button class="lang-option" data-lang="ml">
-                <span class="opt-flag">🇮🇳</span>
-                <span class="opt-name">മലയാളം (Malayalam)</span>
-                <span class="opt-check">✓</span>
-              </button>
-            </div>
-          </div>
-
           <button class="speak-btn pulse-glow" id="voiceSpeakBtn" title="Listen Status / आवाज़ से सुनें">
-            <span class="speaker-icon">🔊</span>
+            <span class="speaker-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg></span>
             <span class="speak-text" data-i18n="speakBtn">सुनें</span>
           </button>
 
           <button class="voice-shortcut-btn" id="navVoiceCenter" title="Voice Guide / बोलकर सुनें">
-            <span>🎙️</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
           </button>
         </div>
 
         <!-- Beekeeper Profile Button -->
-        <button class="profile-btn" id="userProfileBtn" title="Beekeeper Profile / प्रोफ़ाइल" aria-label="Beekeeper Profile">
+        <button class="profile-btn" id="userProfileBtn" title="Beekeeper Profile / प्रोफ़ाइल"
+          aria-label="Beekeeper Profile">
           <div class="profile-avatar-wrap">
-            <span class="profile-emoji">👤</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
           </div>
         </button>
 
@@ -101,10 +548,10 @@
       <div class="main-container">
         <div class="hive-bar-inner">
           <div class="hive-bar-title-wrap">
-            <span class="section-micro-label" data-i18n="selectHive">आपकी पेटियाँ (Select Hive)</span>
+            <span class="section-micro-label" data-i18n="selectHive">आपकी पेटियाँ</span>
             <button class="hive-boxes-menu-btn" id="hiveBoxesMenuBtn" title="View all boxes / सभी पेटियाँ देखें">
-              <span class="btn-box-icon">📦</span>
-              <span data-i18n="hiveBoxesBtn">Hive Boxes</span>
+              <span class="btn-box-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></span>
+              <span data-i18n="hiveBoxesBtn">पेटियाँ</span>
               <span class="hive-boxes-count-badge" id="hiveCountBadge">3</span>
               <span class="chevron-down">▾</span>
             </button>
@@ -126,23 +573,26 @@
           <span></span><span></span><span></span><span></span>
         </div>
         <p id="audioTranscriptText">बोल रहे हैं...</p>
-        <button class="audio-stop-btn" id="audioStopBtn" title="Stop Speech">✕</button>
+        <button class="audio-stop-btn" id="audioStopBtn" title="Stop Speech"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
       </div>
 
       <!-- HERO ROW: Master Condition Card & Honey Harvest Forecast -->
       <div class="hero-dashboard-row">
-        
+
         <!-- 1. MASTER CONDITION CARD: Green to Red Visual Line Indication -->
         <section class="master-condition-card" id="masterConditionCard">
           <div class="condition-top">
-            <div class="condition-emoji-box" id="conditionEmojiBox">
-              <span class="large-emoji" id="conditionEmoji">🟢</span>
+            <div class="condition-beacon-wrap beacon-safe" id="conditionEmojiBox">
+              <div class="beacon-pulse-core"></div>
+              <div class="beacon-pulse-ring ring-1"></div>
+              <div class="beacon-pulse-ring ring-2"></div>
+              <div class="beacon-pulse-ring ring-3"></div>
             </div>
             <div class="condition-meta">
               <div class="condition-meta-row">
-                <span class="condition-tag-label" data-i18n="conditionTitle">पेटी की स्थिति (Hive Health)</span>
+                <span class="condition-tag-label" data-i18n="conditionTitle">पेटी की स्थिति</span>
                 <span class="hive-initiated-badge" id="hiveInitiatedBadge" title="Box Initiation Date / स्थापना तिथि">
-                  <span class="cal-icon">📅</span>
+                  <span class="cal-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></span>
                   <span class="init-label" data-i18n="initiatedLabel">स्थापना:</span>
                   <strong class="init-val" id="hiveInitiatedDate">15 Jan 2026</strong>
                 </span>
@@ -158,9 +608,9 @@
           <!-- The Core Green to Red Line Meter Indicator -->
           <div class="gauge-container">
             <div class="gauge-labels-row">
-              <span class="gauge-label-start" data-i18n="safeLabel">🟢 बढ़िया (Safe)</span>
-              <span class="gauge-label-mid" data-i18n="warningLabel">🟡 ध्यान दें (Check)</span>
-              <span class="gauge-label-end" data-i18n="dangerLabel">🔴 खतरा (Alert)</span>
+              <span class="gauge-label-start"><span class="gauge-dot dot-safe"></span> <span data-i18n="safeLabel">बढ़िया</span></span>
+              <span class="gauge-label-mid"><span class="gauge-dot dot-warn"></span> <span data-i18n="warningLabel">ध्यान दें</span></span>
+              <span class="gauge-label-end"><span class="gauge-dot dot-danger"></span> <span data-i18n="dangerLabel">खतरा</span></span>
             </div>
             <!-- Visual Multi-gradient track -->
             <div class="health-gradient-track">
@@ -173,7 +623,7 @@
 
           <!-- Farmer One-Liner Tip -->
           <div class="farmer-tip-box" id="farmerTipBox">
-            <span class="tip-icon">💡</span>
+            <span class="tip-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="9" y1="18" x2="15" y2="18"></line><line x1="10" y1="22" x2="14" y2="22"></line><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"></path></svg></span>
             <span class="tip-text" id="farmerTipText">तापमान और नमी मधुमक्खियों के अनुकूल है।</span>
           </div>
         </section>
@@ -181,17 +631,18 @@
         <!-- 2. HONEY HARVEST COUNTDOWN & EXPECTED QUANTITY -->
         <section class="harvest-hero-card" id="harvestSection">
           <div class="harvest-card-title">
-            <span class="harvest-icon">🍯</span>
-            <h3 data-i18n="honeyForecast">शहद तैयार होने का अनुमान (Honey Forecast)</h3>
+            <span class="harvest-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg></span>
+            <h3 data-i18n="honeyForecast">शहद तैयार होने का अनुमान</h3>
           </div>
-          
+
           <div class="harvest-split-grid">
             <!-- Honey Ready Days -->
             <div class="harvest-box days-box">
               <div class="harvest-ring-wrap">
                 <svg class="progress-ring" width="96" height="96">
-                  <circle class="ring-bg" stroke="#FDE68A" stroke-width="8" fill="transparent" r="40" cx="48" cy="48"/>
-                  <circle class="ring-progress" id="harvestProgressCircle" stroke="#F59E0B" stroke-width="8" stroke-linecap="round" fill="transparent" r="40" cx="48" cy="48"/>
+                  <circle class="ring-bg" stroke="#FDE68A" stroke-width="8" fill="transparent" r="40" cx="48" cy="48" />
+                  <circle class="ring-progress" id="harvestProgressCircle" stroke="#F59E0B" stroke-width="8"
+                    stroke-linecap="round" fill="transparent" r="40" cx="48" cy="48" />
                 </svg>
                 <div class="ring-center-content">
                   <span class="ring-number" id="harvestDaysNumber">9</span>
@@ -211,13 +662,13 @@
                   <div class="jar-honey-fill" id="jarHoneyFill" style="height: 75%;">
                     <div class="honey-wave"></div>
                   </div>
-                  <span class="jar-icon-overlay">🍯</span>
+                  <span class="jar-icon-overlay"><svg width="22" height="22" viewBox="0 0 24 24" fill="#F59E0B" opacity="0.9"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg></span>
                 </div>
               </div>
               <div class="harvest-text-info">
                 <span class="harvest-stat-label" data-i18n="expectedQtyLabel">अनुमानित शहद वजन</span>
                 <div class="big-qty-number">
-                  <span id="honeyQtyNumber">8.5</span> <span class="kg-unit" data-i18n="kgUnit">किलो (kg)</span>
+                  <span id="honeyQtyNumber">8.5</span> <span class="kg-unit" data-i18n="kgUnit">किलो</span>
                 </div>
                 <span class="market-value-estimate" id="marketValueText">अनुमानित मूल्य: ₹2,550</span>
               </div>
@@ -230,7 +681,7 @@
       <!-- 3. DETAILED LIVE METRICS GRID -->
       <section class="metrics-section" id="metricsSection">
         <div class="section-header-row">
-          <h3 class="section-title" data-i18n="liveSensorsTitle">पेटी के मुख्य माप (Live Hive Readings)</h3>
+          <h3 class="section-title" data-i18n="liveSensorsTitle">पेटी के मुख्य माप</h3>
           <span class="section-subtitle" data-i18n="liveSensorsSubtitle">आईओटी सेंसर द्वारा हर ३० सेकंड में अपडेट</span>
         </div>
 
@@ -239,11 +690,11 @@
           <div class="metric-card" id="cardTemp">
             <div class="metric-card-header">
               <div class="metric-icon-bubble temp-bg">
-                <span>🌡️</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"></path></svg>
               </div>
-              <span class="metric-status-badge status-good" id="tempBadge" data-i18n="normalStatus">सामान्य (Normal)</span>
+              <span class="metric-status-badge status-good" id="tempBadge" data-i18n="normalStatus">सामान्य</span>
             </div>
-            <span class="metric-name" data-i18n="tempTitle">तापमान (Temperature)</span>
+            <span class="metric-name" data-i18n="tempTitle">तापमान</span>
             <div class="metric-value-row">
               <span class="metric-val" id="tempValue">34.5</span>
               <span class="metric-unit">°C</span>
@@ -259,11 +710,11 @@
           <div class="metric-card" id="cardHumidity">
             <div class="metric-card-header">
               <div class="metric-icon-bubble hum-bg">
-                <span>💧</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
               </div>
-              <span class="metric-status-badge status-good" id="humidityBadge" data-i18n="normalStatus">सामान्य (Normal)</span>
+              <span class="metric-status-badge status-good" id="humidityBadge" data-i18n="normalStatus">सामान्य</span>
             </div>
-            <span class="metric-name" data-i18n="humidityTitle">नमी (Moisture / Humidity)</span>
+            <span class="metric-name" data-i18n="humidityTitle">नमी व आर्द्रता</span>
             <div class="metric-value-row">
               <span class="metric-val" id="humidityValue">58</span>
               <span class="metric-unit">% RH</span>
@@ -278,17 +729,17 @@
           <div class="metric-card" id="cardDisease">
             <div class="metric-card-header">
               <div class="metric-icon-bubble disease-bg" id="diseaseIconWrap">
-                <span id="diseaseIcon">🛡️</span>
+                <span id="diseaseIcon"><svg class="metric-svg-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#10B981" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg></span>
               </div>
-              <span class="metric-status-badge status-good" id="diseaseBadge" data-i18n="noDisease">रोग मुक्त (Clean)</span>
+              <span class="metric-status-badge status-good" id="diseaseBadge" data-i18n="noDisease">रोग मुक्त</span>
             </div>
-            <span class="metric-name" data-i18n="diseaseTitle">रोग और कीट जांच (Disease Status)</span>
+            <span class="metric-name" data-i18n="diseaseTitle">रोग और कीट जांच</span>
             <div class="disease-content-row">
               <div class="disease-name-label" id="diseaseName">कोई रोग नहीं - पेटी सुरक्षित है</div>
-              <button class="remedy-action-btn hidden" id="remedyBtn" data-i18n="remedyBtn">उपचार देखें ➔</button>
+              <button class="remedy-action-btn hidden" id="remedyBtn"><span data-i18n="remedyBtn">उपचार देखें</span> <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
             </div>
             <div class="disease-remedy-preview" id="diseaseRemedyPreview">
-              ✅ कोई वरोआ माइट (Mites) या फफूंदी नहीं मिली। रानी मक्खी सुरक्षित है।
+              कोई वरोआ माइट (Mites) या फफूंदी नहीं मिली। रानी मक्खी सुरक्षित है।
             </div>
           </div>
 
@@ -296,11 +747,20 @@
           <div class="metric-card" id="cardBeeStatus">
             <div class="metric-card-header">
               <div class="metric-icon-bubble bee-bg">
-                <span class="flying-bee">🐝</span>
+                <div class="flying-bee-svg-wrap">
+                  <svg class="flight-bee-svg" viewBox="0 0 32 32" width="26" height="26" fill="none">
+                    <ellipse cx="10" cy="10" rx="6" ry="4" transform="rotate(-28 10 10)" fill="rgba(255, 255, 255, 0.9)" stroke="#94A3B8" stroke-width="0.8"/>
+                    <ellipse cx="22" cy="10" rx="6" ry="4" transform="rotate(28 22 10)" fill="rgba(255, 255, 255, 0.9)" stroke="#94A3B8" stroke-width="0.8"/>
+                    <ellipse cx="16" cy="18" rx="8" ry="10" fill="#F59E0B"/>
+                    <path d="M9 15C11 16.5 21 16.5 23 15C23.5 16.5 23.5 17.5 23 18.5C21 20 11 20 9 18.5Z" fill="#1E293B"/>
+                    <path d="M10 21C12 22.5 20 22.5 22 21C21.5 22.5 20.5 23.5 19.5 24.5C18 25.5 14 25.5 12.5 24.5Z" fill="#1E293B"/>
+                    <circle cx="16" cy="9" r="4" fill="#1E293B"/>
+                  </svg>
+                </div>
               </div>
-              <span class="metric-status-badge status-active" id="beeStatusBadge" data-i18n="activeStatus">बहुत सक्रिय (Active)</span>
+              <span class="metric-status-badge status-active" id="beeStatusBadge" data-i18n="activeStatus">सक्रिय</span>
             </div>
-            <span class="metric-name" data-i18n="colonyTitle">मक्खियों की गतिविधि (Bee Activity)</span>
+            <span class="metric-name" data-i18n="colonyTitle">मक्खियों की गतिविधि</span>
             <div class="bee-activity-details">
               <div class="bee-status-headline" id="beeStatusHeadline">रानी सक्रिय • पराग लाना जारी</div>
               <div class="bee-sound-meter">
@@ -308,9 +768,18 @@
               </div>
             </div>
             <div class="bee-behavior-bar">
-              <div class="behavior-chip active" id="chipForaging" data-i18n="chipForaging">🌸 पराग संचय (Foraging)</div>
-              <div class="behavior-chip active" id="chipQueen" data-i18n="chipQueen">👑 रानी सुरक्षित</div>
-              <div class="behavior-chip" id="chipSwarm" data-i18n="chipSwarm">⚠️ झुंड खतरा: ना के बराबर</div>
+              <div class="behavior-chip active" id="chipForaging">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M12 16.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5 4.5 4.5 0 1 1-4.5 4.5z"></path></svg>
+                <span data-i18n="chipForaging">पराग संचय</span>
+              </div>
+              <div class="behavior-chip active" id="chipQueen">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14"></path></svg>
+                <span data-i18n="chipQueen">रानी सुरक्षित</span>
+              </div>
+              <div class="behavior-chip" id="chipSwarm">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <span data-i18n="chipSwarm">झुंड खतरा: कम</span>
+              </div>
             </div>
           </div>
         </div>
@@ -318,11 +787,11 @@
 
       <!-- 4. BOTTOM DUAL SECTION: SUPPORT & DEMO CONTROLLER -->
       <div class="bottom-dual-row" id="supportSection">
-        
+
         <!-- QUICK HELP & KVIC EXPERT ASSISTANCE -->
         <section class="support-section">
           <div class="support-card">
-            <div class="support-icon">📞</div>
+            <div class="support-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
             <div class="support-info">
               <h4 data-i18n="needHelpTitle">मदद चाहिए? KVIC विशेषज्ञ से बात करें</h4>
               <p data-i18n="needHelpDesc">मुफ्त परामर्श, रोग निदान एवं शहद बिक्री सहायता</p>
@@ -332,7 +801,7 @@
               </div>
             </div>
             <a href="tel:18001801551" class="call-expert-btn" id="callExpertBtn">
-              <span data-i18n="callBtn">📞 कॉल करें</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> <span data-i18n="callBtn">कॉल करें</span>
             </a>
           </div>
         </section>
@@ -341,18 +810,18 @@
         <section class="demo-controller-card">
           <div class="demo-header" id="demoToggleHeader">
             <div class="demo-title">
-              <span>⚙️</span>
-              <h4 data-i18n="demoTitle">सेंसर टेस्ट टूल (Demo Simulation)</h4>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+              <h4 data-i18n="demoTitle">सेंसर टेस्ट टूल</h4>
             </div>
             <span class="toggle-arrow" id="demoArrow">▼</span>
           </div>
           <div class="demo-body" id="demoBody">
             <p class="demo-hint" data-i18n="demoHint">अलग-अलग स्थिति की जांच के लिए बटन दबाएं:</p>
             <div class="demo-buttons-grid">
-              <button class="demo-btn green-btn" data-scenario="healthy" data-i18n="demoNormal">🟢 सब सामान्य (Normal)</button>
-              <button class="demo-btn yellow-btn" data-scenario="highTemp" data-i18n="demoHeat">🟡 तेज गर्मी (38°C Heat)</button>
-              <button class="demo-btn red-btn" data-scenario="disease" data-i18n="demoDisease">🔴 वरोआ रोग (Disease Alert)</button>
-              <button class="demo-btn gold-btn" data-scenario="harvestReady" data-i18n="demoHarvest">🍯 शहद तैयार (Ready!)</button>
+              <button class="demo-btn green-btn" data-scenario="healthy"><span class="demo-dot green-dot"></span> <span data-i18n="demoNormal">सब सामान्य</span></button>
+              <button class="demo-btn yellow-btn" data-scenario="highTemp"><span class="demo-dot yellow-dot"></span> <span data-i18n="demoHeat">तेज गर्मी</span></button>
+              <button class="demo-btn red-btn" data-scenario="disease"><span class="demo-dot red-dot"></span> <span data-i18n="demoDisease">वरोआ रोग</span></button>
+              <button class="demo-btn gold-btn" data-scenario="harvestReady"><span class="demo-dot gold-dot"></span> <span data-i18n="demoHarvest">शहद तैयार</span></button>
             </div>
           </div>
         </section>
@@ -365,18 +834,18 @@
     <div class="modal-backdrop hidden" id="remedyModal">
       <div class="modal-card">
         <div class="modal-head">
-          <span class="modal-alert-icon">⚠️</span>
+          <span class="modal-alert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></span>
           <div>
             <h3 id="modalTitle">रोग निवारण निर्देश</h3>
             <span class="modal-sub" data-i18n="modalSub">KVIC प्रमाणित उपचार</span>
           </div>
-          <button class="close-modal-btn" id="closeModalBtn" title="Close">✕</button>
+          <button class="close-modal-btn" id="closeModalBtn" title="Close"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
         </div>
         <div class="modal-body" id="modalBodyText">
           <!-- Dynamic remedies -->
         </div>
         <div class="modal-footer">
-          <button class="modal-action-btn" id="modalOkBtn" data-i18n="modalOk">समझ गया (OK)</button>
+          <button class="modal-action-btn" id="modalOkBtn" data-i18n="modalOk">समझ गया</button>
         </div>
       </div>
     </div>
@@ -385,12 +854,12 @@
     <div class="modal-backdrop hidden" id="deleteHiveModal">
       <div class="modal-card modal-delete-card">
         <div class="modal-head modal-delete-head">
-          <span class="modal-alert-icon delete-icon">🗑️</span>
+          <span class="modal-alert-icon delete-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg></span>
           <div>
-            <h3 id="deleteModalTitle" data-i18n="deleteModalTitle">पेटी हटाएं (Delete Hive)</h3>
-            <span class="modal-sub" data-i18n="deleteModalSub">पुष्टि आवश्यक है • Confirmation Required</span>
+            <h3 id="deleteModalTitle" data-i18n="deleteModalTitle">पेटी हटाएं</h3>
+            <span class="modal-sub" data-i18n="deleteModalSub">पुष्टि आवश्यक है</span>
           </div>
-          <button class="close-modal-btn" id="closeDeleteModalBtn" title="Close">✕</button>
+          <button class="close-modal-btn" id="closeDeleteModalBtn" title="Close"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
         </div>
         <div class="modal-body delete-modal-body">
           <p class="delete-warning-text" id="deleteModalMessage" data-i18n="deletePrompt">
@@ -398,12 +867,12 @@
           </p>
           <div class="delete-hive-preview-box">
             <span class="delete-hive-badge" id="deleteHiveBadgeName">पेटी १</span>
-            <span class="delete-hive-note" data-i18n="deleteIrreversible">यह क्रिया पूर्ववत नहीं की जा सकती (Cannot be undone)</span>
+            <span class="delete-hive-note" data-i18n="deleteIrreversible">यह क्रिया पूर्ववत नहीं की जा सकती</span>
           </div>
         </div>
         <div class="modal-footer delete-modal-footer">
-          <button class="modal-cancel-btn" id="cancelDeleteBtn" data-i18n="cancelBtn">रद्द करें (Cancel)</button>
-          <button class="modal-confirm-delete-btn" id="confirmDeleteBtn" data-i18n="confirmDeleteBtn">हटाने की पुष्टि करें (Confirm Delete)</button>
+          <button class="modal-cancel-btn" id="cancelDeleteBtn" data-i18n="cancelBtn">रद्द करें</button>
+          <button class="modal-confirm-delete-btn" id="confirmDeleteBtn" data-i18n="confirmDeleteBtn">हटाने की पुष्टि करें</button>
         </div>
       </div>
     </div>
@@ -412,41 +881,34 @@
     <div class="modal-backdrop hidden" id="addHiveModal">
       <div class="modal-card modal-form-card">
         <div class="modal-head modal-add-head">
-          <span class="modal-alert-icon add-box-icon">📦</span>
+          <span class="modal-alert-icon add-box-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></span>
           <div>
-            <h3 id="addHiveModalTitle" data-i18n="addHiveModalTitle">नया बॉक्स जोड़ें (Add New Hive Box)</h3>
+            <h3 id="addHiveModalTitle" data-i18n="addHiveModalTitle">नया बॉक्स जोड़ें</h3>
             <span class="modal-sub" data-i18n="addHiveModalSub">पेटी का नाम और स्थापना तिथि दर्ज करें</span>
           </div>
-          <button class="close-modal-btn" id="closeAddHiveModalBtn" title="Close">✕</button>
+          <button class="close-modal-btn" id="closeAddHiveModalBtn" title="Close"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
         </div>
         <form id="addHiveForm" onsubmit="return false;">
           <div class="modal-body add-hive-modal-body">
             <div class="form-group">
-              <label for="newHiveNameInput" class="form-label" data-i18n="hiveNameLabel">पेटी का नाम (Hive Box Name):</label>
-              <input 
-                type="text" 
-                id="newHiveNameInput" 
-                class="form-input" 
-                placeholder="उदा. पेटी ४ (सरसों खेत) / Hive 4" 
-                required 
-                autocomplete="off"
-              />
+              <label for="newHiveNameInput" class="form-label" data-i18n="hiveNameLabel">पेटी का नाम (Hive Box
+                Name):</label>
+              <input type="text" id="newHiveNameInput" class="form-input" placeholder="उदा. पेटी ४ (सरसों खेत) / Hive 4"
+                required autocomplete="off" />
               <span class="form-help-hint" data-i18n="hiveNameHint">पहचान के लिए स्थान या फसल का नाम लिख सकते हैं</span>
             </div>
             <div class="form-group">
-              <label for="newHiveDateInput" class="form-label" data-i18n="initiatedDateLabel">स्थापना तिथि (Initiation Date):</label>
-              <input 
-                type="date" 
-                id="newHiveDateInput" 
-                class="form-input" 
-                required 
-              />
+              <label for="newHiveDateInput" class="form-label" data-i18n="initiatedDateLabel">स्थापना तिथि (Initiation
+                Date):</label>
+              <input type="date" id="newHiveDateInput" class="form-input" required />
               <span class="form-help-hint" data-i18n="hiveDateHint">जिस दिन यह पेटी खेत में स्थापित की गई थी</span>
             </div>
           </div>
           <div class="modal-footer add-hive-modal-footer">
-            <button type="button" class="modal-cancel-btn" id="cancelAddHiveBtn" data-i18n="cancelBtn">रद्द करें (Cancel)</button>
-            <button type="submit" class="modal-confirm-add-btn" id="confirmAddHiveBtn" data-i18n="addBoxConfirmBtn">+ पेटी जोड़ें (Add Box)</button>
+            <button type="button" class="modal-cancel-btn" id="cancelAddHiveBtn" data-i18n="cancelBtn">रद्द करें
+              (Cancel)</button>
+            <button type="submit" class="modal-confirm-add-btn" id="confirmAddHiveBtn" data-i18n="addBoxConfirmBtn">+
+              पेटी जोड़ें (Add Box)</button>
           </div>
         </form>
       </div>
@@ -456,12 +918,13 @@
     <div class="modal-backdrop hidden" id="selectHiveModal">
       <div class="modal-card modal-boxes-card">
         <div class="modal-head">
-          <span class="modal-alert-icon box-list-icon">📦</span>
+          <span class="modal-alert-icon box-list-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></span>
           <div>
             <h3 data-i18n="allHivesModalTitle">आपकी पेटियाँ (All Hive Boxes)</h3>
-            <span class="modal-sub" data-i18n="allHivesModalSub">देखने के लिए किसी भी पेटी पर टैप करें (Tap to select)</span>
+            <span class="modal-sub" data-i18n="allHivesModalSub">देखने के लिए किसी भी पेटी पर टैप करें (Tap to
+              select)</span>
           </div>
-          <button class="close-modal-btn" id="closeSelectHiveModalBtn" title="Close">✕</button>
+          <button class="close-modal-btn" id="closeSelectHiveModalBtn" title="Close"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
         </div>
         <div class="modal-body select-hive-modal-body">
           <div class="all-hives-list" id="allHivesModalList">
@@ -470,51 +933,266 @@
         </div>
         <div class="modal-footer select-hive-modal-footer">
           <button type="button" class="modal-add-from-list-btn" id="addNewHiveFromListBtn">
-            <span>➕</span>
-            <span data-i18n="addHiveBtn">+ नया बॉक्स जोड़ें (Add Box)</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            <span data-i18n="addHiveBtn">+ नया बॉक्स जोड़ें</span>
           </button>
-          <button type="button" class="modal-cancel-btn" id="closeSelectHiveModalFooterBtn" data-i18n="closeBtn">बंद करें (Close)</button>
+          <button type="button" class="modal-cancel-btn" id="closeSelectHiveModalFooterBtn" data-i18n="closeBtn">बंद करें</button>
         </div>
       </div>
     </div>
 
-    <!-- Beekeeper Profile Modal -->
-    <div class="modal-backdrop hidden" id="userProfileModal">
-      <div class="modal-card modal-profile-card">
-        <div class="modal-head">
-          <div class="profile-modal-avatar">👨‍🌾</div>
-          <div>
-            <h3>मधुमक्खी पालक प्रोफ़ाइल (Beekeeper Profile)</h3>
-            <span class="modal-sub">KVIC राष्ट्रीय मधुमक्खी मिशन • National Honey Mission</span>
+    <!-- Beekeeper Profile Side Navigation Drawer (Image 2 Reference) -->
+    <div class="drawer-overlay hidden" id="userProfileModal">
+      <div class="profile-side-drawer" id="profileSideDrawer">
+        
+        <!-- Drawer Top Header -->
+        <div class="drawer-header">
+          <div class="drawer-user-info">
+            <div class="drawer-avatar-wrap">
+              <div class="drawer-avatar-svg-box">
+                <svg class="avatar-beekeeper-svg" viewBox="0 0 40 40" width="40" height="40" fill="none">
+                  <circle cx="20" cy="20" r="20" fill="#FEF3C7"/>
+                  <path d="M12 15C12 10.5 15.5 7 20 7C24.5 7 28 10.5 28 15V17H12V15Z" fill="#F59E0B"/>
+                  <ellipse cx="20" cy="17" rx="10" ry="3" fill="#D97706"/>
+                  <circle cx="20" cy="20" r="5.5" fill="#FBBF24"/>
+                  <path d="M10 35C10 29.5 14.5 25 20 25C25.5 25 30 29.5 30 35H10Z" fill="#1E293B"/>
+                </svg>
+              </div>
+              <span class="drawer-avatar-verified" title="Certified Beekeeper"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3.5"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+            </div>
+            <div class="drawer-user-details">
+              <h3 class="drawer-user-name" id="profileModalUserName">Ram Kumar</h3>
+              <p class="drawer-user-meta" id="profileModalUserPhone">+91 98765 43210 • <span class="badge-id">KVIC-UP-2026-8841</span></p>
+              <div class="drawer-profile-actions">
+                <button type="button" class="drawer-view-profile-btn" id="toggleProfileDetailsBtn">
+                  <span id="viewProfileBtnLabel" data-i18n="drawerViewProfile">View Profile</span>
+                  <span class="drawer-chevron" id="profileDetailsChevron">▾</span>
+                </button>
+                <span class="drawer-certified-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span data-i18n="drawerCertifiedBadge">Certified Beekeeper</span>
+                </span>
+              </div>
+            </div>
           </div>
-          <button class="close-modal-btn" id="closeProfileModalBtn" title="Close">✕</button>
+          <button type="button" class="drawer-close-btn" id="closeProfileModalBtn" title="Close" aria-label="Close"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
         </div>
-        <div class="modal-body profile-modal-body">
-          <div class="profile-info-grid">
-            <div class="profile-info-row">
-              <span class="profile-field-label">पालक का नाम (Name):</span>
-              <strong class="profile-field-val">राम कुमार (Ram Kumar)</strong>
+
+        <!-- Collapsible Beekeeper Registration Details -->
+        <div class="drawer-profile-details hidden" id="profileDetailsDrawer">
+          <div class="drawer-details-card">
+            <div class="drawer-detail-item">
+              <span class="drawer-detail-label" data-i18n="drawerNameLabel">Beekeeper Name</span>
+              <strong class="drawer-detail-val" id="profileBeekeeperName">Ram Kumar</strong>
             </div>
-            <div class="profile-info-row">
-              <span class="profile-field-label">KVIC पंजीयन संख्या (ID):</span>
-              <strong class="profile-field-val badge-id">KVIC-UP-2026-8841</strong>
+            <div class="drawer-detail-item">
+              <span class="drawer-detail-label" data-i18n="drawerRegIdLabel">KVIC Registration ID</span>
+              <span class="badge-id">KVIC-UP-2026-8841</span>
             </div>
-            <div class="profile-info-row">
-              <span class="profile-field-label">स्थान (Location):</span>
-              <strong class="profile-field-val">सहारनपुर, उत्तर प्रदेश (UP)</strong>
+            <div class="drawer-detail-item">
+              <span class="drawer-detail-label" data-i18n="drawerLocationLabel">Location</span>
+              <strong class="drawer-detail-val" data-i18n="drawerLocationVal">Saharanpur, Uttar Pradesh</strong>
             </div>
-            <div class="profile-info-row">
-              <span class="profile-field-label">सक्रिय पेटियाँ (Active Boxes):</span>
-              <strong class="profile-field-val" id="profileHiveCount">3 पेटियाँ (Active)</strong>
+            <div class="drawer-detail-item">
+              <span class="drawer-detail-label" data-i18n="drawerActiveBoxesLabel">Active Hive Boxes</span>
+              <strong class="drawer-detail-val text-amber" id="drawerDetailHiveCount">3 Boxes Active</strong>
             </div>
-            <div class="profile-info-row">
-              <span class="profile-field-label">मिशन प्रमाणन (Status):</span>
-              <span class="profile-status-certified">✓ प्रमाणित पालक (Certified Beekeeper)</span>
+            <div class="drawer-detail-item">
+              <span class="drawer-detail-label" data-i18n="drawerMissionLabel">Certification Status</span>
+              <span class="drawer-pill-success"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> <span data-i18n="drawerCertifiedBadge">Certified Beekeeper</span></span>
             </div>
+          </div>
+        </div>
+
+        <div class="drawer-divider"></div>
+
+        <!-- Navigation Menu Items (Ref: Image 2) -->
+        <div class="drawer-menu-list">
+          <!-- 1. My Hive Boxes -->
+          <button type="button" class="drawer-nav-item" id="drawerHiveBoxesBtn">
+            <div class="drawer-nav-left">
+              <div class="drawer-nav-icon-box bg-amber">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+              </div>
+              <span class="drawer-nav-title" data-i18n="drawerHives">My Hive Boxes</span>
+            </div>
+            <div class="drawer-nav-right">
+              <span class="drawer-tag" id="profileHiveCount">3 Active</span>
+              <span class="drawer-arrow">›</span>
+            </div>
+          </button>
+
+          <!-- 2. Select Language -->
+          <button type="button" class="drawer-nav-item" id="openLangFromProfileBtn">
+            <div class="drawer-nav-left">
+              <div class="drawer-nav-icon-box bg-blue">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              </div>
+              <span class="drawer-nav-title" data-i18n="drawerLanguage">Select Language</span>
+            </div>
+            <div class="drawer-nav-right">
+              <span class="drawer-lang-pill" id="profileCurrentLangName">English</span>
+              <span class="drawer-arrow">›</span>
+            </div>
+          </button>
+
+          <!-- 3. Terms & Conditions -->
+          <button type="button" class="drawer-nav-item" id="drawerTermsBtn">
+            <div class="drawer-nav-left">
+              <div class="drawer-nav-icon-box bg-slate">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              </div>
+              <span class="drawer-nav-title" data-i18n="drawerTerms">Terms & Conditions</span>
+            </div>
+            <div class="drawer-nav-right">
+              <span class="drawer-arrow">›</span>
+            </div>
+          </button>
+
+          <!-- 4. Privacy Policy -->
+          <button type="button" class="drawer-nav-item" id="drawerPrivacyBtn">
+            <div class="drawer-nav-left">
+              <div class="drawer-nav-icon-box bg-emerald">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <span class="drawer-nav-title" data-i18n="drawerPrivacy">Privacy Policy</span>
+            </div>
+            <div class="drawer-nav-right">
+              <span class="drawer-arrow">›</span>
+            </div>
+          </button>
+
+          <!-- 5. Contact Us / Support -->
+          <button type="button" class="drawer-nav-item" id="drawerContactBtn">
+            <div class="drawer-nav-left">
+              <div class="drawer-nav-icon-box bg-teal">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <span class="drawer-nav-title" data-i18n="drawerContact">Contact Us & Support</span>
+            </div>
+            <div class="drawer-nav-right">
+              <span class="drawer-arrow">›</span>
+            </div>
+          </button>
+
+          <div class="drawer-menu-separator"></div>
+
+          <!-- 6. Logout -->
+          <button type="button" class="drawer-nav-item drawer-logout-item" id="logoutProfileBtn">
+            <div class="drawer-nav-left">
+              <div class="drawer-nav-icon-box bg-rose">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+              </div>
+              <span class="drawer-nav-title text-danger" data-i18n="drawerLogout">Logout</span>
+            </div>
+            <div class="drawer-nav-right">
+              <span class="drawer-arrow text-danger"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+            </div>
+          </button>
+        </div>
+
+        <!-- Drawer Footer (Matching Image 2 Reference) -->
+        <div class="drawer-footer">
+          <div class="drawer-theme-pill">
+            <span class="drawer-theme-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+            <span class="drawer-theme-text" data-i18n="lightModeLabel">Light Mode</span>
+          </div>
+
+          <div class="drawer-footer-meta">
+            <p class="drawer-follow-label" data-i18n="drawerFollowUs">National Honey Mission • Govt. of India</p>
+            <div class="drawer-social-row">
+              <a href="https://www.kvic.gov.in" target="_blank" rel="noopener noreferrer" class="drawer-social-link" title="KVIC Portal"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M4 18h16M6 18V9M10 18V9M14 18V9M18 18V9M12 2L2 7h20L12 2z"></path></svg></a>
+              <a href="tel:18001801551" class="drawer-social-link" title="Toll Free Support"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></a>
+              <span class="drawer-social-link" title="National Honey Mission"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg></span>
+              <span class="drawer-social-link" title="MSME Govt of India"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000080" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg></span>
+            </div>
+            <p class="drawer-version-tag">KVIC Bee Mitra v3.9 • Ministry of MSME</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Clean Terms & Conditions Modal -->
+    <div class="modal-backdrop hidden" id="termsModal">
+      <div class="modal-card">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg></span>
+            <div>
+              <h3 data-i18n="termsModalTitle">Terms & Conditions</h3>
+              <span class="modal-sub">National Honey Mission • KVIC MSME</span>
+            </div>
+          </div>
+          <button type="button" class="close-modal-btn" id="closeTermsModalBtn" aria-label="Close"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+        </div>
+        <div class="modal-body-scrollable">
+          <p><strong>1. Authorized Apiary Telemetry:</strong> KVIC Bee Mitra application services and IoT sensors are intended for verified beekeepers participating in the National Honey Mission.</p>
+          <p><strong>2. Proper Device Upkeep:</strong> Beekeepers are advised to keep sensor probes free of excessive propolis accumulation and replace sensor coin cells promptly.</p>
+          <p><strong>3. Advisory Nature:</strong> Telemetry health indices, disease probability ratings, and harvest weight forecasts are algorithmic estimates based on sensor models.</p>
+          <p><strong>4. Honey Procurement & Subsidy:</strong> Certified produce adhering to KVIC moisture benchmarks (<20%) is eligible for state procurement support.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="modal-action-btn" id="closeTermsFooterBtn" data-i18n="closeBtn">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Clean Privacy Policy Modal -->
+    <div class="modal-backdrop hidden" id="privacyModal">
+      <div class="modal-card">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span>
+            <div>
+              <h3 data-i18n="privacyModalTitle">Privacy Policy</h3>
+              <span class="modal-sub">Farmer Data Protection & Security</span>
+            </div>
+          </div>
+          <button type="button" class="close-modal-btn" id="closePrivacyModalBtn" aria-label="Close"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+        </div>
+        <div class="modal-body-scrollable">
+          <p><strong>1. Beekeeper Data Security:</strong> Personal contact numbers, apiary locations, and sensor telemetry readings are securely encrypted under Indian digital privacy guidelines.</p>
+          <p><strong>2. Zero Commercial Sharing:</strong> Farmer data is never rented, monetized, or shared with unauthorized third-party commercial organizations.</p>
+          <p><strong>3. Telemetry Storage:</strong> Hourly sensor telemetry (temperature, moisture, sound) is utilized strictly to provide proactive colony alerts and disease prevention guidance.</p>
+          <p><strong>4. Data Control:</strong> You have full rights to request telemetry archive export or deletion by contacting your designated district KVIC extension center.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="modal-action-btn" id="closePrivacyFooterBtn" data-i18n="closeBtn">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Clean Contact Support Modal -->
+    <div class="modal-backdrop hidden" id="contactSupportModal">
+      <div class="modal-card">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
+            <div>
+              <h3 data-i18n="contactModalTitle">Helpline & Expert Support</h3>
+              <span class="modal-sub">National Honey Mission Advisory Desk</span>
+            </div>
+          </div>
+          <button type="button" class="close-modal-btn" id="closeContactModalBtn" aria-label="Close"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+        </div>
+        <div class="modal-body-scrollable">
+          <div class="support-helpline-box">
+            <span class="support-phone-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
+            <div>
+              <span class="support-phone-label" data-i18n="tollFreeLabel">Toll Free: 1800-180-1551</span>
+              <span class="support-timing-label" data-i18n="timingLabel">9:00 AM to 6:00 PM (Mon-Sat)</span>
+            </div>
+            <a href="tel:18001801551" class="support-call-action-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> <span data-i18n="callBtn">Call</span></a>
+          </div>
+          <div class="support-info-list">
+            <p>• <strong>Free Consultation:</strong> Instant diagnosis of bee diseases, mites, queen loss, and swarming control.</p>
+            <p>• <strong>KVIC Testing Labs:</strong> Free honey moisture and purity testing assistance for certified beekeepers.</p>
+            <p>• <strong>Official Email:</strong> <code>honeymission.kvic@gov.in</code></p>
           </div>
         </div>
         <div class="modal-footer">
-          <button class="modal-cancel-btn" id="closeProfileModalFooterBtn" style="width: 100%;">बंद करें (Close)</button>
+          <button type="button" class="modal-action-btn" id="closeContactFooterBtn" data-i18n="closeBtn">Close</button>
         </div>
       </div>
     </div>
@@ -522,6 +1200,7 @@
   </div>
 
   <script type="module" src="firebase-config.js"></script>
-  <script src="app.js?v=3.4"></script>
+  <script src="app.js?v=3.9"></script>
 </body>
+
 </html>

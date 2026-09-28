@@ -15,5 +15,8 @@
     "honey-mission"
   ],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "lottie-web": "^5.13.0"
+  }
 }

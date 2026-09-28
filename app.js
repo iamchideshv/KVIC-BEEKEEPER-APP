@@ -16,12 +16,12 @@ const i18n = {
     navHelp: "Expert Help",
     liveSensorsBadge: "LIVE SENSORS",
     speakBtn: "Listen",
-    selectHive: "Your Hives (Select Box)",
+    selectHive: "Your Hives",
     addHiveBtn: "+ Add New Box",
     conditionTitle: "Overall Hive Health",
-    safeLabel: "🟢 Healthy (Safe)",
-    warningLabel: "🟡 Caution (Check)",
-    dangerLabel: "🔴 Danger (Alert)",
+    safeLabel: "Healthy",
+    warningLabel: "Caution",
+    dangerLabel: "Danger",
     honeyForecast: "Honey Harvest Forecast",
     harvestDaysLabel: "Days to Harvest",
     daysUnit: "days",
@@ -32,10 +32,10 @@ const i18n = {
     liveSensorsSubtitle: "Auto-synced every 30 seconds via IoT Sensors",
     tempTitle: "Temperature",
     tempIdealHint: "Ideal Zone: 33°C - 36°C",
-    humidityTitle: "Moisture / Humidity",
+    humidityTitle: "Moisture & Humidity",
     humidityIdealHint: "Ideal Zone: 50% - 65%",
     diseaseTitle: "Disease & Pest Check",
-    remedyBtn: "View Remedy ➔",
+    remedyBtn: "View Remedy ",
     colonyTitle: "Bee Colony Activity",
     normalStatus: "Normal",
     activeStatus: "Active",
@@ -43,25 +43,25 @@ const i18n = {
     diseaseAlert: "Disease Alert!",
     soundLabel: "Sound: ",
     soundCalm: " (Calm)",
-    chipForaging: "🌸 High Foraging",
-    chipQueen: "👑 Queen Safe & Laying",
-    chipSwarm: "⚠️ Swarm Threat: Very Low",
+    chipForaging: "High Foraging",
+    chipQueen: "Queen Safe & Laying",
+    chipSwarm: "Swarm Threat: Very Low",
     needHelpTitle: "Need Help? Speak to KVIC Honey Expert",
     needHelpDesc: "Free consultation, disease diagnosis & honey market advisory",
     tollFreeLabel: "Toll Free: 1800-180-1551",
     timingLabel: "9:00 AM to 6:00 PM (Mon-Sat)",
-    callBtn: "📞 Call Expert",
-    demoTitle: "Sensor Simulator (Demo Controls)",
+    callBtn: "Call Expert",
+    demoTitle: "Sensor Simulator",
     demoHint: "Press buttons to simulate different hive scenarios:",
-    demoNormal: "🟢 All Normal (Safe)",
-    demoHeat: "🟡 High Heat (38°C)",
-    demoDisease: "🔴 Varroa Alert (Disease)",
-    demoHarvest: "🍯 Honey Ready for Harvest",
+    demoNormal: "All Normal",
+    demoHeat: "High Heat (38°C)",
+    demoDisease: "Varroa Alert",
+    demoHarvest: "Honey Ready",
     voiceStart: "Speaking now...",
     voiceFinished: "Completed",
     modalTitleSuffix: " Cure Guide",
     modalSub: "KVIC Certified Treatment Protocol",
-    modalOk: "Understood (OK)",
+    modalOk: "Understood",
     newHiveAdded: "New Hive Box Added Successfully!",
     deleteModalTitle: "Delete Hive Box",
     deleteModalSub: "Confirmation Required",
@@ -83,7 +83,29 @@ const i18n = {
     hiveBoxesBtn: "Hive Boxes",
     allHivesModalTitle: "All Hive Boxes",
     allHivesModalSub: "Tap any box to select & monitor",
-    closeBtn: "Close"
+    closeBtn: "Close",
+    drawerProfileTitle: "Beekeeper Profile",
+    drawerViewProfile: "View Profile",
+    drawerViewDetailsClose: "Hide Details",
+    drawerCertifiedBadge: "Certified Beekeeper",
+    drawerHives: "My Hive Boxes",
+    drawerLanguage: "Select Language",
+    drawerTerms: "Terms & Conditions",
+    drawerPrivacy: "Privacy Policy",
+    drawerContact: "Contact Us & Support",
+    drawerLogout: "Logout",
+    drawerNameLabel: "Beekeeper Name",
+    drawerRegIdLabel: "KVIC Registration ID",
+    drawerLocationLabel: "Location",
+    drawerLocationVal: "Saharanpur, Uttar Pradesh",
+    drawerActiveBoxesLabel: "Active Hive Boxes",
+    drawerMissionLabel: "Certification Status",
+    drawerFollowUs: "National Honey Mission • Govt. of India",
+    lightModeLabel: "Light Mode",
+    activeBoxesSuffix: "Boxes Active",
+    termsModalTitle: "Terms & Conditions",
+    privacyModalTitle: "Privacy Policy",
+    contactModalTitle: "Helpline & Expert Support"
   },
   hi: {
     kvicSub: "खादी एवं ग्रामोद्योग आयोग • KVIC",
@@ -95,59 +117,59 @@ const i18n = {
     navHelp: "सहयोग",
     liveSensorsBadge: "सक्रिय सेंसर",
     speakBtn: "सुनें",
-    selectHive: "आपकी पेटियाँ (Select Hive)",
+    selectHive: "आपकी पेटियाँ",
     addHiveBtn: "+ नया बॉक्स जोड़ें",
-    conditionTitle: "पेटी की स्थिति (Hive Health)",
-    safeLabel: "🟢 बढ़िया (Safe)",
-    warningLabel: "🟡 ध्यान दें (Check)",
-    dangerLabel: "🔴 खतरा (Alert)",
-    honeyForecast: "शहद तैयार होने का अनुमान (Honey Forecast)",
+    conditionTitle: "पेटी की स्थिति",
+    safeLabel: "बढ़िया",
+    warningLabel: "ध्यान दें",
+    dangerLabel: "खतरा",
+    honeyForecast: "शहद तैयार होने का अनुमान",
     harvestDaysLabel: "तैयार होने में बाकी",
     daysUnit: "दिन",
     expectedQtyLabel: "अनुमानित शहद वजन",
-    kgUnit: "किलो (kg)",
+    kgUnit: "किलो",
     marketValuePrefix: "अनुमानित मूल्य: ₹",
-    liveSensorsTitle: "पेटी के मुख्य माप (Live Hive Readings)",
+    liveSensorsTitle: "पेटी के मुख्य माप",
     liveSensorsSubtitle: "आईओटी सेंसर द्वारा हर ३० सेकंड में अपडेट",
-    tempTitle: "तापमान (Temperature)",
+    tempTitle: "तापमान",
     tempIdealHint: "उचित सीमा: 33°C - 36°C",
-    humidityTitle: "नमी (Moisture / Humidity)",
+    humidityTitle: "नमी व आर्द्रता",
     humidityIdealHint: "उचित सीमा: 50% - 65%",
-    diseaseTitle: "रोग और कीट जांच (Disease Status)",
-    remedyBtn: "उपचार देखें ➔",
-    colonyTitle: "मक्खियों की गतिविधि (Bee Activity)",
-    normalStatus: "सामान्य (Normal)",
-    activeStatus: "सक्रिय (Active)",
-    noDisease: "रोग मुक्त (Clean)",
+    diseaseTitle: "रोग और कीट जांच",
+    remedyBtn: "उपचार देखें ",
+    colonyTitle: "मक्खियों की गतिविधि",
+    normalStatus: "सामान्य",
+    activeStatus: "सक्रिय",
+    noDisease: "रोग मुक्त",
     diseaseAlert: "रोग चेतावनी!",
     soundLabel: "ध्वनि: ",
     soundCalm: " (शांत)",
-    chipForaging: "🌸 पराग संचय (Foraging)",
-    chipQueen: "👑 रानी सुरक्षित",
-    chipSwarm: "⚠️ झुंड खतरा: ना के बराबर",
+    chipForaging: "पराग संचय",
+    chipQueen: "रानी सुरक्षित",
+    chipSwarm: "झुंड खतरा: ना के बराबर",
     needHelpTitle: "मदद चाहिए? KVIC विशेषज्ञ से बात करें",
     needHelpDesc: "मुफ्त परामर्श, रोग निदान एवं शहद बिक्री सहायता",
     tollFreeLabel: "टोल फ्री नंबर: 1800-180-1551",
     timingLabel: "सुबह ९:०० से शाम ६:०० बजे तक",
-    callBtn: "📞 कॉल करें",
-    demoTitle: "सेंसर टेस्ट टूल (Demo Simulation)",
+    callBtn: "कॉल करें",
+    demoTitle: "सेंसर टेस्ट टूल",
     demoHint: "अलग-अलग स्थिति की जांच के लिए बटन दबाएं:",
-    demoNormal: "🟢 सब सामान्य (Normal)",
-    demoHeat: "🟡 तेज गर्मी (38°C Heat)",
-    demoDisease: "🔴 वरोआ रोग (Disease Alert)",
-    demoHarvest: "🍯 शहद तैयार (Ready!)",
+    demoNormal: "सब सामान्य",
+    demoHeat: "तेज गर्मी (38°C)",
+    demoDisease: "वरोआ रोग",
+    demoHarvest: "शहद तैयार",
     voiceStart: "बोल रहे हैं...",
     voiceFinished: "सुन लिया",
     modalTitleSuffix: " निवारण निर्देश",
     modalSub: "KVIC प्रमाणित उपचार निर्देशिका",
-    modalOk: "समझ गया (OK)",
+    modalOk: "समझ गया",
     newHiveAdded: "नई पेटी सफलतापूर्वक जोड़ी गई!",
-    deleteModalTitle: "पेटी हटाएं (Delete Hive)",
-    deleteModalSub: "पुष्टि आवश्यक है • Confirmation Required",
+    deleteModalTitle: "पेटी हटाएं",
+    deleteModalSub: "पुष्टि आवश्यक है",
     deletePrompt: "क्या आप वाकई इस मधुमक्खी पेटी को हटाना चाहते हैं?",
     deleteIrreversible: "यह पेटी और इसका लाइव डेटा स्थायी रूप से हटा दिया जाएगा।",
-    confirmDeleteBtn: "हाँ, हटाएं (Confirm Delete)",
-    cancelBtn: "रद्द करें (Cancel)",
+    confirmDeleteBtn: "हाँ, हटाएं",
+    cancelBtn: "रद्द करें",
     cannotDeleteLast: "आपकी मधुमक्खीशाला में कम से कम एक पेटी सक्रिय रहनी चाहिए।",
     initiatedLabel: "स्थापना:",
     addHiveModalTitle: "नया बॉक्स जोड़ें",
@@ -159,10 +181,32 @@ const i18n = {
     hiveDateHint: "जिस दिन यह पेटी खेत में स्थापित की गई थी",
     addBoxConfirmBtn: "+ पेटी जोड़ें",
     emptyNameAlert: "कृपया पेटी का नाम दर्ज करें।",
-    hiveBoxesBtn: "पेटियाँ (Boxes)",
+    hiveBoxesBtn: "पेटियाँ",
     allHivesModalTitle: "आपकी मधुमक्खी पेटियाँ",
     allHivesModalSub: "देखने के लिए किसी भी पेटी पर टैप करें",
-    closeBtn: "बंद करें"
+    closeBtn: "बंद करें",
+    drawerProfileTitle: "मधुमक्खी पालक प्रोफ़ाइल",
+    drawerViewProfile: "प्रोफ़ाइल देखें",
+    drawerViewDetailsClose: "विवरण छिपाएं",
+    drawerCertifiedBadge: "प्रमाणित मधुमक्खी पालक",
+    drawerHives: "मेरी मधुमक्खी पेटियाँ",
+    drawerLanguage: "भाषा चुनें",
+    drawerTerms: "नियम एवं शर्तें",
+    drawerPrivacy: "गोपनीयता नीति",
+    drawerContact: "संपर्क व सहायता",
+    drawerLogout: "लॉग आउट",
+    drawerNameLabel: "पालक का नाम",
+    drawerRegIdLabel: "KVIC पंजीयन संख्या",
+    drawerLocationLabel: "स्थान",
+    drawerLocationVal: "सहारनपुर, उत्तर प्रदेश",
+    drawerActiveBoxesLabel: "सक्रिय पेटियाँ",
+    drawerMissionLabel: "प्रमाणन स्थिति",
+    drawerFollowUs: "राष्ट्रीय मधुमक्खी पालन मिशन • भारत सरकार",
+    lightModeLabel: "लाइट मोड",
+    activeBoxesSuffix: "सक्रिय पेटियाँ",
+    termsModalTitle: "नियम एवं शर्तें",
+    privacyModalTitle: "गोपनीयता नीति",
+    contactModalTitle: "हेल्पलाइन व विशेषज्ञ सहायता"
   },
   ta: {
     kvicSub: "காதர் மற்றும் கிராமத் தொழில்கள் ஆணையம் • KVIC",
@@ -174,59 +218,59 @@ const i18n = {
     navHelp: "உதவி",
     liveSensorsBadge: "நேரடி சென்சார்",
     speakBtn: "கேட்கவும்",
-    selectHive: "உங்கள் பெட்டிகள் (தேர்வு செய்யவும்)",
+    selectHive: "உங்கள் பெட்டிகள்",
     addHiveBtn: "+ புதிய பெட்டி சேர்",
     conditionTitle: "பெட்டியின் ஆரோக்கிய நிலை",
-    safeLabel: "🟢 நன்று (Safe)",
-    warningLabel: "🟡 கவனம் (Caution)",
-    dangerLabel: "🔴 ஆபத்து (Alert)",
+    safeLabel: "நன்று",
+    warningLabel: "கவனம்",
+    dangerLabel: "ஆபத்து",
     honeyForecast: "தேன் அறுவடை மதிப்பீடு",
     harvestDaysLabel: "அறுவடைக்கு மீதமுள்ளவை",
     daysUnit: "நாட்கள்",
     expectedQtyLabel: "எதிர்பார்க்கப்படும் தேன் எடை",
-    kgUnit: "கிலோ (kg)",
+    kgUnit: "கிலோ",
     marketValuePrefix: "மதிப்பிடப்பட்ட விலை: ₹",
     liveSensorsTitle: "நேரடி சென்சார் அளவீடுகள்",
     liveSensorsSubtitle: "IoT சென்சார்கள் மூலம் ஒவ்வொரு 30 வினாடிக்கும் புதுப்பிக்கப்படுகிறது",
-    tempTitle: "வெப்பநிலை (Temperature)",
+    tempTitle: "வெப்பநிலை",
     tempIdealHint: "சரியான வரம்பு: 33°C - 36°C",
-    humidityTitle: "ஈரப்பதம் (Humidity)",
+    humidityTitle: "ஈரப்பதம்",
     humidityIdealHint: "சரியான வரம்பு: 50% - 65%",
     diseaseTitle: "நோய் மற்றும் பூச்சி சோதனை",
-    remedyBtn: "சிகிச்சை பார்க்க ➔",
+    remedyBtn: "சிகிச்சை பார்க்க ",
     colonyTitle: "தேனீக்களின் செயல்பாடு",
-    normalStatus: "இயல்பு (Normal)",
-    activeStatus: "சுறுசுறுப்பு (Active)",
-    noDisease: "நோய் அற்றது (Clean)",
+    normalStatus: "இயல்பு",
+    activeStatus: "சுறுசுறுப்பு",
+    noDisease: "நோய் அற்றது",
     diseaseAlert: "நோய் எச்சரிக்கை!",
     soundLabel: "ஒலி: ",
     soundCalm: " (அமைதி)",
-    chipForaging: "🌸 தீவிர மகரந்த சேகரிப்பு",
-    chipQueen: "👑 ராணி தேனீ பாதுகாப்பானது",
-    chipSwarm: "⚠️ கூட்டம் பிரிதல் ஆபத்து: மிகக் குறைவு",
+    chipForaging: "தீவிர மகரந்த சேகரிப்பு",
+    chipQueen: "ராணி தேனீ பாதுகாப்பானது",
+    chipSwarm: "கூட்டம் பிரிதல் ஆபத்து: மிகக் குறைவு",
     needHelpTitle: "உதவி தேவையா? KVIC நிபுணரிடம் பேசவும்",
     needHelpDesc: "இலவச ஆலோசனை, நோய் தடுப்பு மற்றும் தேன் விற்பனை உதவி",
     tollFreeLabel: "கட்டணமில்லா எண்: 1800-180-1551",
     timingLabel: "காலை 9:00 முதல் மாலை 6:00 வரை",
-    callBtn: "📞 அழைக்கவும்",
-    demoTitle: "சென்சார் டெஸ்ட் கருவி (மாதிரி)",
+    callBtn: "அழைக்கவும்",
+    demoTitle: "சென்சார் டெஸ்ட் கருவி",
     demoHint: "பல்வேறு நிலைகளை சோதிக்க பொத்தான்களை அழுத்தவும்:",
-    demoNormal: "🟢 அனைத்தும் நன்று (Normal)",
-    demoHeat: "🟡 கடும் வெப்பம் (38°C Heat)",
-    demoDisease: "🔴 வரோவா நோய் எச்சரிக்கை",
-    demoHarvest: "🍯 தேன் தயார் (அறுவடை!)",
+    demoNormal: "அனைத்தும் நன்று",
+    demoHeat: "கடும் வெப்பம் (38°C)",
+    demoDisease: "வரோவா நோய் எச்சரிக்கை",
+    demoHarvest: "தேன் தயார் (அறுவடை)",
     voiceStart: "பேசுகிறது...",
     voiceFinished: "முடிந்தது",
     modalTitleSuffix: " தீர்வு வழிகாட்டி",
     modalSub: "KVIC அங்கீகரிக்கப்பட்ட சிகிச்சை நெறிமுறை",
-    modalOk: "புரிந்தது (OK)",
+    modalOk: "புரிந்தது",
     newHiveAdded: "புதிய தேனீ பெட்டி வெற்றிகரமாக சேர்க்கப்பட்டது!",
-    deleteModalTitle: "பெட்டியை நீக்கு (Delete Hive)",
+    deleteModalTitle: "பெட்டியை நீக்கு",
     deleteModalSub: "உறுதிப்படுத்தல் தேவை",
     deletePrompt: "இந்தப் பெட்டியை நிச்சயமாக நீக்க விரும்புகிறீர்களா?",
     deleteIrreversible: "இந்த பெட்டி மற்றும் சென்சார் தரவு நிரந்தரமாக நீக்கப்படும்.",
-    confirmDeleteBtn: "ஆம், நீக்கு (Confirm Delete)",
-    cancelBtn: "ரத்து செய் (Cancel)",
+    confirmDeleteBtn: "ஆம், நீக்கு",
+    cancelBtn: "ரத்து செய்",
     cannotDeleteLast: "குறைந்தது ஒரு பெட்டியாவது செயலில் இருக்க வேண்டும்.",
     initiatedLabel: "தொடங்கிய நாள்:",
     addHiveModalTitle: "புதிய பெட்டி சேர்க்க",
@@ -237,7 +281,33 @@ const i18n = {
     initiatedDateLabel: "தொடங்கிய தேதி:",
     hiveDateHint: "தோட்டத்தில் பெட்டி வைக்கப்பட்ட நாள்",
     addBoxConfirmBtn: "+ பெட்டி சேர்",
-    emptyNameAlert: "தயவுசெய்து பெட்டியின் பெயரை உள்ளிடவும்."
+    emptyNameAlert: "தயவுசெய்து பெட்டியின் பெயரை உள்ளிடவும்.",
+    hiveBoxesBtn: "பெட்டிகள்",
+    allHivesModalTitle: "உங்கள் தேனீ பெட்டிகள்",
+    allHivesModalSub: "பார்க்க ஏதேனும் ஒரு பெட்டியைத் தட்டவும்",
+    closeBtn: "மூடு",
+    drawerProfileTitle: "தேனீ வளர்ப்பாளர் சுயவிவரம்",
+    drawerViewProfile: "சுயவிவரம் காண்க",
+    drawerViewDetailsClose: "விவரங்களை மறை",
+    drawerCertifiedBadge: "சான்றளிக்கப்பட்ட வளர்ப்பாளர்",
+    drawerHives: "என் தேனீ பெட்டிகள்",
+    drawerLanguage: "மொழியைத் தேர்ந்தெடுக்கவும்",
+    drawerTerms: "விதிமுறைகள் மற்றும் நிபந்தனைகள்",
+    drawerPrivacy: "தனியுரிமைக் கொள்கை",
+    drawerContact: "தொடர்பு மற்றும் உதவி",
+    drawerLogout: "வெளியேறு",
+    drawerNameLabel: "வளர்ப்பாளர் பெயர்",
+    drawerRegIdLabel: "KVIC பதிவு எண்",
+    drawerLocationLabel: "இடம்",
+    drawerLocationVal: "சஹாரன்பூர், உத்திரபிரதேசம்",
+    drawerActiveBoxesLabel: "செயலில் உள்ள பெட்டிகள்",
+    drawerMissionLabel: "சான்றிதழ் நிலை",
+    drawerFollowUs: "தேசிய தேனீ வளர்ப்பு பணி • இந்திய அரசு",
+    lightModeLabel: "லைட் பயன்முறை",
+    activeBoxesSuffix: "செயலில் உள்ள பெட்டிகள்",
+    termsModalTitle: "விதிமுறைகள் மற்றும் நிபந்தனைகள்",
+    privacyModalTitle: "தனியுரிமைக் கொள்கை",
+    contactModalTitle: "உதவி மையம்"
   },
   te: {
     kvicSub: "ఖాదీ మరియు గ్రామ పరిశ్రమల కమిషన్ • KVIC",
@@ -249,59 +319,59 @@ const i18n = {
     navHelp: "సహాయం",
     liveSensorsBadge: "లైవ్ సెన్సార్లు",
     speakBtn: "వినండి",
-    selectHive: "మీ పెట్టెలు (ఎంచుకోండి)",
+    selectHive: "మీ పెట్టెలు",
     addHiveBtn: "+ కొత్త పెట్టెను జోడించండి",
     conditionTitle: "పెట్టె ఆరోగ్య స్థితి",
-    safeLabel: "🟢 సురక్షితం (Safe)",
-    warningLabel: "🟡 శ్రద్ధ వహించండి (Check)",
-    dangerLabel: "🔴 ప్రమాదం (Alert)",
+    safeLabel: "సురక్షితం",
+    warningLabel: "శ్రద్ధ వహించండి",
+    dangerLabel: "ప్రమాదం",
     honeyForecast: "తేనె కోత అంచనా",
     harvestDaysLabel: "కోతకు మిగిలిన రోజులు",
     daysUnit: "రోజులు",
     expectedQtyLabel: "అంచనా వేసిన తేనె బరువు",
-    kgUnit: "కిలో (kg)",
+    kgUnit: "కిలో",
     marketValuePrefix: "అంచనా విలువ: ₹",
     liveSensorsTitle: "ప్రత్యక్ష సెన్సార్ రీడింగ్‌లు",
     liveSensorsSubtitle: "IoT సెన్సార్ల ద్వారా ప్రతి 30 సెకన్లకు నవీకరించబడుతుంది",
-    tempTitle: "ఉష్ణోగ్రత (Temperature)",
+    tempTitle: "ఉష్ణోగ్రత",
     tempIdealHint: "సరైన పరిధి: 33°C - 36°C",
-    humidityTitle: "తేమ (Moisture / Humidity)",
+    humidityTitle: "తేమ",
     humidityIdealHint: "సరైన పరిధి: 50% - 65%",
     diseaseTitle: "వ్యాధి మరియు తెగులు తనిఖీ",
-    remedyBtn: "చికిత్స చూడండి ➔",
-    colonyTitle: "ఈగల కార్యాచరణ (Bee Activity)",
-    normalStatus: "సాధారణం (Normal)",
-    activeStatus: "చురుకుగా ఉంది (Active)",
-    noDisease: "వ్యాధి రహితం (Clean)",
+    remedyBtn: "చికిత్స చూడండి ",
+    colonyTitle: "ఈగల కార్యాచరణ",
+    normalStatus: "సాధారణం",
+    activeStatus: "చురుకుగా ఉంది",
+    noDisease: "వ్యాధి రహితం",
     diseaseAlert: "వ్యాధి హెచ్చరిక!",
     soundLabel: "శబ్దం: ",
     soundCalm: " (ప్రశాంతం)",
-    chipForaging: "🌸 పుప్పొడి సేకరణ",
-    chipQueen: "👑 రాణి ఈగ సురక్షితం",
-    chipSwarm: "⚠️ సమూహం విడిపోయే ప్రమాదం: లేదు",
+    chipForaging: "పుప్పొడి సేకరణ",
+    chipQueen: "రాణి ఈగ సురక్షితం",
+    chipSwarm: "సమూహం విడిపోయే ప్రమాదం: లేదు",
     needHelpTitle: "సహాయం కావాలా? KVIC నిపుణుడితో మాట్లాడండి",
     needHelpDesc: "ఉచిత సలహా, వ్యాధి నిర్ధారణ మరియు తేనె విక్రయ సహాయం",
     tollFreeLabel: "టోల్ ఫ్రీ: 1800-180-1551",
     timingLabel: "ఉదయం 9:00 నుండి సాయంత్రం 6:00 వరకు",
-    callBtn: "📞 కాల్ చేయండి",
-    demoTitle: "సెన్సార్ టెస్ట్ సాధనం (డెమో)",
+    callBtn: "కాల్ చేయండి",
+    demoTitle: "సెన్సార్ టెస్ట్ సాధనం",
     demoHint: "వివిధ పరిస్థితులను పరీక్షించడానికి బటన్లను నొక్కండి:",
-    demoNormal: "🟢 అంతా సాధారణం (Normal)",
-    demoHeat: "🟡 అధిక వేడి (38°C Heat)",
-    demoDisease: "🔴 వరోవా తెగులు హెచ్చరిక",
-    demoHarvest: "🍯 తేనె సిద్ధంగా ఉంది (Ready!)",
+    demoNormal: "అంతా సాధారణం",
+    demoHeat: "అధిక వేడి (38°C)",
+    demoDisease: "వరోవా తెగులు హెచ్చరిక",
+    demoHarvest: "తేనె సిద్ధంగా ఉంది",
     voiceStart: "మాట్లాడుతోంది...",
     voiceFinished: "పూర్తయింది",
     modalTitleSuffix: " నివారణ మార్గదర్శిని",
     modalSub: "KVIC ధృవీకరించిన చికిత్స పద్ధతి",
-    modalOk: "అర్థమైంది (OK)",
+    modalOk: "అర్థమైంది",
     newHiveAdded: "కొత్త తేనెటీగల పెట్టె విజయవంతంగా జోడించబడింది!",
-    deleteModalTitle: "పెట్టెను తొలగించండి (Delete Hive)",
+    deleteModalTitle: "పెట్టెను తొలగించండి",
     deleteModalSub: "నిర్ధారణ అవసరం",
     deletePrompt: "మీరు ఖచ్చితంగా ఈ తేనెటీగల పెట్టెను తొలగించాలనుకుంటున్నారా?",
     deleteIrreversible: "ఈ పెట్టె మరియు సెన్సార్ డేటా శాశ్వతంగా తొలగించబడుతుంది.",
-    confirmDeleteBtn: "అవును, తొలగించు (Confirm Delete)",
-    cancelBtn: "రద్దు చేయండి (Cancel)",
+    confirmDeleteBtn: "అవును, తొలగించు",
+    cancelBtn: "రద్దు చేయండి",
     cannotDeleteLast: "కనీసం ఒక పెట్టె అయినా సక్రియంగా ఉండాలి.",
     initiatedLabel: "ప్రారంభ తేది:",
     addHiveModalTitle: "కొత్త పెట్టెను జోడించండి",
@@ -312,7 +382,33 @@ const i18n = {
     initiatedDateLabel: "ప్రారంభించిన తేది:",
     hiveDateHint: "ఈ పెట్టెను పొలంలో ఉంచిన తేదీ",
     addBoxConfirmBtn: "+ పెట్టెను జోడించు",
-    emptyNameAlert: "దయచేసి పెట్టె పేరును నమోదు చేయండి."
+    emptyNameAlert: "దయచేసి పెట్టె పేరును నమోదు చేయండి.",
+    hiveBoxesBtn: "పెట్టెలు",
+    allHivesModalTitle: "మీ తేనెటీగల పెట్టెలు",
+    allHivesModalSub: "వీక్షించడానికి ఏదైనా పెట్టెపై నొక్కండి",
+    closeBtn: "మూసివేయి",
+    drawerProfileTitle: "తేనెటీగల పెంపకందారు ప్రొఫైల్",
+    drawerViewProfile: "ప్రొఫైల్ చూడండి",
+    drawerViewDetailsClose: "వివరాలను దాచండి",
+    drawerCertifiedBadge: "ధృవీకరించబడిన పెంపకందారు",
+    drawerHives: "నా తేనెటీగల పెట్టెలు",
+    drawerLanguage: "భాషను ఎంచుకోండి",
+    drawerTerms: "నిబంధనలు మరియు షరతులు",
+    drawerPrivacy: "గోప్యతా విధానం",
+    drawerContact: "మమ్మల్ని సంప్రదించండి & మద్దతు",
+    drawerLogout: "లాగ్ అవుట్",
+    drawerNameLabel: "పెంపకందారు పేరు",
+    drawerRegIdLabel: "KVIC నమోదు సంఖ్య",
+    drawerLocationLabel: "ప్రాంతం",
+    drawerLocationVal: "సహారన్‌పూర్, ఉత్తర ప్రదేశ్",
+    drawerActiveBoxesLabel: "క్రియాశీల పెట్టెలు",
+    drawerMissionLabel: "మిషన్ ధృవీకరణ",
+    drawerFollowUs: "నేషనల్ హనీ మిషన్ • భారత ప్రభుత్వం",
+    lightModeLabel: "లైట్ మోడ్",
+    activeBoxesSuffix: "క్రియాశీల పెట్టెలు",
+    termsModalTitle: "నిబంధనలు మరియు షరతులు",
+    privacyModalTitle: "గోప్యతా విధానం",
+    contactModalTitle: "మద్దతు కేంద్రం"
   },
   kn: {
     kvicSub: "ಖಾದಿ ಮತ್ತು ಗ್ರಾಮೋದ್ಯೋಗ ಆಯೋಗ • KVIC",
@@ -324,59 +420,59 @@ const i18n = {
     navHelp: "ಸಹಾಯ",
     liveSensorsBadge: "ಲೈವ್ ಸೆನ್ಸಾರ್",
     speakBtn: "ಕೇಳಿ",
-    selectHive: "ನಿಮ್ಮ ಪೆಟ್ಟಿಗೆಗಳು (ಆಯ್ಕೆಮಾಡಿ)",
+    selectHive: "ನಿಮ್ಮ ಪೆಟ್ಟಿಗೆಗಳು",
     addHiveBtn: "+ ಹೊಸ ಪೆಟ್ಟಿಗೆ ಸೇರಿಸಿ",
     conditionTitle: "ಪೆಟ್ಟಿಗೆಯ ಆರೋಗ್ಯ ಸ್ಥಿತಿ",
-    safeLabel: "🟢 ಸುರಕ್ಷಿತ (Safe)",
-    warningLabel: "🟡 ಗಮನಿಸಿ (Check)",
-    dangerLabel: "🔴 ಅಪಾಯ (Alert)",
+    safeLabel: "ಸುರಕ್ಷಿತ",
+    warningLabel: "ಗಮನಿಸಿ",
+    dangerLabel: "ಅಪಾಯ",
     honeyForecast: "ಜೇನು ಕೊಯ್ಲಿನ ಅಂದಾಜು",
     harvestDaysLabel: "ಕೊಯ್ಲಿಗೆ ಉಳಿದ ದಿನಗಳು",
     daysUnit: "ದಿನಗಳು",
     expectedQtyLabel: "ನಿರೀಕ್ಷಿತ ಜೇನುತೂಕ",
-    kgUnit: "ಕೆಜಿ (kg)",
+    kgUnit: "ಕೆಜಿ",
     marketValuePrefix: "ಅಂದಾಜು ಮೌಲ್ಯ: ₹",
     liveSensorsTitle: "ಲೈವ್ ಸೆನ್ಸಾರ್ ಅಳತೆಗಳು",
     liveSensorsSubtitle: "IoT ಸಂವೇದಕಗಳ ಮೂಲಕ ಪ್ರತಿ 30 ಸೆಕೆಂಡಿಗೆ ನವೀಕರಿಸಲಾಗುತ್ತದೆ",
-    tempTitle: "ತಾಪಮಾನ (Temperature)",
+    tempTitle: "ತಾಪಮಾನ",
     tempIdealHint: "ಸೂಕ್ತ ಮಿತಿ: 33°C - 36°C",
-    humidityTitle: "ತೇವಾಂಶ (Moisture / Humidity)",
+    humidityTitle: "ತೇವಾಂಶ",
     humidityIdealHint: "ಸೂಕ್ತ ಮಿತಿ: 50% - 65%",
     diseaseTitle: "ರೋಗ ಮತ್ತು ಕೀಟ ಪರೀಕ್ಷೆ",
-    remedyBtn: "ಚಿಕಿತ್ಸೆ ನೋಡಿ ➔",
+    remedyBtn: "ಚಿಕಿತ್ಸೆ ನೋಡಿ ",
     colonyTitle: "ಜೇನುನೊಣಗಳ ಚಟುವಟಿಕೆ",
-    normalStatus: "ಸಾಮಾನ್ಯ (Normal)",
-    activeStatus: "ಚುರುಕಾಗಿದೆ (Active)",
-    noDisease: "ರೋಗಮುಕ್ತ (Clean)",
+    normalStatus: "ಸಾಮಾನ್ಯ",
+    activeStatus: "ಚುರುಕಾಗಿದೆ",
+    noDisease: "ರೋಗಮುಕ್ತ",
     diseaseAlert: "ರೋಗ ಎಚ್ಚರಿಕೆ!",
     soundLabel: "ಶಬ್ದ: ",
     soundCalm: " (ಶಾಂತ)",
-    chipForaging: "🌸 ಪರಾಗ ಸಂಗ್ರಹ ಚುರುಕು",
-    chipQueen: "👑 ರಾಣಿ ನೊಣ ಸುರಕ್ಷಿತ",
-    chipSwarm: "⚠️ ಗುಂಪು ವಿಭಜನೆ ಅಪಾಯ: ಇಲ್ಲ",
+    chipForaging: "ಪರಾಗ ಸಂಗ್ರಹ ಚುರುಕು",
+    chipQueen: "ರಾಣಿ ನೊಣ ಸುರಕ್ಷಿತ",
+    chipSwarm: "ಗುಂಪು ವಿಭಜನೆ ಅಪಾಯ: ಇಲ್ಲ",
     needHelpTitle: "ಸಹಾಯ ಬೇಕೇ? KVIC ತಜ್ಞರೊಂದಿಗೆ ಮಾತನಾಡಿ",
     needHelpDesc: "ಉಚಿತ ಸಲಹೆ, ರೋಗ ತಪಾಸಣೆ ಮತ್ತು ಜೇನು ಮಾರಾಟ ಸಹಾಯ",
     tollFreeLabel: "ಟೋಲ್ ಫ್ರೀ ಸಂಖ್ಯೆ: 1800-180-1551",
     timingLabel: "ಬೆಳಿಗ್ಗೆ 9:00 ರಿಂದ ಸಂಜೆ 6:00 ರವರೆಗೆ",
-    callBtn: "📞 ಕರೆ ಮಾಡಿ",
-    demoTitle: "ಸೆನ್ಸಾರ್ ಪರೀಕ್ಷಾ ಸಾಧನ (ಡೆಮೊ)",
+    callBtn: "ಕರೆ ಮಾಡಿ",
+    demoTitle: "ಸೆನ್ಸಾರ್ ಪರೀಕ್ಷಾ ಸಾಧನ",
     demoHint: "ವಿವಿಧ ಪರಿಸ್ಥಿತಿಗಳನ್ನು ಪರೀಕ್ಷಿಸಲು ಬಟನ್‌ಗಳನ್ನು ಒತ್ತಿ:",
-    demoNormal: "🟢 ಎಲ್ಲವೂ ಸಹಜ (Normal)",
-    demoHeat: "🟡 ತೀವ್ರ ಶಾಖ (38°C Heat)",
-    demoDisease: "🔴 ವರೋವಾ ರೋಗ ಎಚ್ಚರಿಕೆ",
-    demoHarvest: "🍯 ಜೇನುತುಪ್ಪ ಸಿದ್ಧವಾಗಿದೆ!",
+    demoNormal: "ಎಲ್ಲವೂ ಸಹಜ",
+    demoHeat: "ತೀವ್ರ ಶಾಖ (38°C)",
+    demoDisease: "ವರೋವಾ ರೋಗ ಎಚ್ಚರಿಕೆ",
+    demoHarvest: "ಜೇನುತುಪ್ಪ ಸಿದ್ಧವಾಗಿದೆ",
     voiceStart: "ಮಾತನಾಡುತ್ತಿದೆ...",
     voiceFinished: "ಮುಗಿದಿದೆ",
     modalTitleSuffix: " ಪರಿಹಾರ ಮಾರ್ಗದರ್ಶಿ",
     modalSub: "KVIC ಪ್ರಮಾಣೀಕೃತ ಚಿಕಿತ್ಸಾ ನಿಯಮಗಳು",
-    modalOk: "ಅರ್ಥವಾಯಿತು (OK)",
+    modalOk: "ಅರ್ಥವಾಯಿತು",
     newHiveAdded: "ಹೊಸ ಜೇನು ಪೆಟ್ಟಿಗೆಯನ್ನು ಯಶಸ್ವಿಯಾಗಿ ಸೇರಿಸಲಾಗಿದೆ!",
-    deleteModalTitle: "ಪೆಟ್ಟಿಗೆಯನ್ನು ಅಳಿಸಿ (Delete Hive)",
+    deleteModalTitle: "ಪೆಟ್ಟಿಗೆಯನ್ನು ಅಳಿಸಿ",
     deleteModalSub: "ದೃಢೀಕರಣ ಅಗತ್ಯವಿದೆ",
     deletePrompt: "ನೀವು ಖಚಿತವಾಗಿ ಈ ಜೇನು ಪೆಟ್ಟಿಗೆಯನ್ನು ಅಳಿಸಲು ಬಯಸುವಿರಾ?",
     deleteIrreversible: "ಈ ಪೆಟ್ಟಿಗೆ ಮತ್ತು ಸಂವೇದಕ ಡೇಟಾವನ್ನು ಶಾಶ್ವತವಾಗಿ ತೆಗೆದುಹಾಕಲಾಗುತ್ತದೆ.",
-    confirmDeleteBtn: "ಹೌದು, ಅಳಿಸಿ (Confirm Delete)",
-    cancelBtn: "ರದ್ದುಮಾಡಿ (Cancel)",
+    confirmDeleteBtn: "ಹೌದು, ಅಳಿಸಿ",
+    cancelBtn: "ರದ್ದುಮಾಡಿ",
     cannotDeleteLast: "ಕನಿಷ್ಠ ಒಂದು ಪೆಟ್ಟಿಗೆಯಾದರೂ ಸಕ್ರಿಯವಾಗಿರಬೇಕು.",
     initiatedLabel: "ಪ್ರಾರಂಭ ದಿನಾಂಕ:",
     addHiveModalTitle: "ಹೊಸ ಪೆಟ್ಟಿಗೆ ಸೇರಿಸಿ",
@@ -387,7 +483,33 @@ const i18n = {
     initiatedDateLabel: "ಪ್ರಾರಂಭ ದಿನಾಂಕ:",
     hiveDateHint: "ಈ ಪೆಟ್ಟಿಗೆಯನ್ನು ತೋಟದಲ್ಲಿ ಸ್ಥಾಪಿಸಿದ ದಿನಾಂಕ",
     addBoxConfirmBtn: "+ ಪೆಟ್ಟಿಗೆ ಸೇರಿಸಿ",
-    emptyNameAlert: "ದಯವಿಟ್ಟು ಪೆಟ್ಟಿಗೆಯ ಹೆಸರನ್ನು ನಮೂದಿಸಿ."
+    emptyNameAlert: "ದಯವಿಟ್ಟು ಪೆಟ್ಟಿಗೆಯ ಹೆಸರನ್ನು ನಮೂದಿಸಿ.",
+    hiveBoxesBtn: "ಪೆಟ್ಟಿಗೆಗಳು",
+    allHivesModalTitle: "ನಿಮ್ಮ ಜೇನು ಪೆಟ್ಟಿಗೆಗಳು",
+    allHivesModalSub: "ವೀಕ್ಷಿಸಲು ಯಾವುದೇ ಪೆಟ್ಟಿಗೆಯನ್ನು ಸ್ಪರ್ಶಿಸಿ",
+    closeBtn: "ಮುಚ್ಚಿ",
+    drawerProfileTitle: "ಜೇನುಸಾಕಣೆದಾರರ ಪ್ರೊಫೈಲ್",
+    drawerViewProfile: "ಪ್ರೊಫೈಲ್ ವೀಕ್ಷಿಸಿ",
+    drawerViewDetailsClose: "ವಿವರಗಳನ್ನು ಮರೆಮಾಡಿ",
+    drawerCertifiedBadge: "ಪ್ರಮಾಣೀಕೃತ ಸಾಕಣೆದಾರ",
+    drawerHives: "ನನ್ನ ಜೇನು ಪೆಟ್ಟಿಗೆಗಳು",
+    drawerLanguage: "ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+    drawerTerms: "ನಿಯಮಗಳು ಮತ್ತು ಷರತ್ತುಗಳು",
+    drawerPrivacy: "ಗೌಪ್ಯತಾ ನೀತಿ",
+    drawerContact: "ಸಂಪರ್ಕ ಮತ್ತು ಬೆಂಬಲ",
+    drawerLogout: "ಲಾಗ್ ಔಟ್",
+    drawerNameLabel: "ಸಾಕಣೆದಾರರ ಹೆಸರು",
+    drawerRegIdLabel: "KVIC ನೋಂದಣಿ ಸಂಖ್ಯೆ",
+    drawerLocationLabel: "ಸ್ಥಳ",
+    drawerLocationVal: "ಸಹಾರನ್‌ಪುರ, ಉತ್ತರ ಪ್ರದೇಶ",
+    drawerActiveBoxesLabel: "ಸಕ್ರಿಯ ಪೆಟ್ಟಿಗೆಗಳು",
+    drawerMissionLabel: "ಮಿಷನ್ ಪ್ರಮಾಣೀಕರಣ",
+    drawerFollowUs: "ರಾಷ್ಟ್ರೀಯ ಜೇನು ಮಿಷನ್ • ಭಾರತ ಸರ್ಕಾರ",
+    lightModeLabel: "ಲೈಟ್ ಮೋಡ್",
+    activeBoxesSuffix: "ಸಕ್ರಿಯ ಪೆಟ್ಟಿಗೆಗಳು",
+    termsModalTitle: "ನಿಯಮಗಳು ಮತ್ತು ಷರತ್ತುಗಳು",
+    privacyModalTitle: "ಗೌಪ್ಯತಾ ನೀತಿ",
+    contactModalTitle: "ಸಹಾಯವಾಣಿ ಕೇಂದ್ರ"
   },
   ml: {
     kvicSub: "ഖാദി ആൻഡ് വില്ലേജ് ഇൻഡസ്ട്രീസ് കമ്മീഷൻ • KVIC",
@@ -399,70 +521,106 @@ const i18n = {
     navHelp: "സഹായം",
     liveSensorsBadge: "തത്സമയ സെൻസർ",
     speakBtn: "കേൾക്കുക",
-    selectHive: "നിങ്ങളുടെ പെട്ടികൾ (തിരഞ്ഞെടുക്കുക)",
+    selectHive: "നിങ്ങളുടെ പെട്ടികൾ",
     addHiveBtn: "+ പുതിയ പെട്ടി ചേർക്കുക",
     conditionTitle: "പെട്ടിയുടെ ആരോഗ്യ നില",
-    safeLabel: "🟢 സുരക്ഷിതം (Safe)",
-    warningLabel: "🟡 ശ്രദ്ധിക്കുക (Check)",
-    dangerLabel: "🔴 അപകടം (Alert)",
+    safeLabel: "സുരക്ഷിതം",
+    warningLabel: "ശ്രദ്ധിക്കുക",
+    dangerLabel: "അപകടം",
     honeyForecast: "തേൻ വിളവെടുപ്പ് കണക്കുകൂട്ടൽ",
     harvestDaysLabel: "വിളവെടുപ്പിന് ബാക്കി",
     daysUnit: "ദിവസങ്ങൾ",
     expectedQtyLabel: "പ്രതീക്ഷിക്കുന്ന തേൻ ഭാരം",
-    kgUnit: "കിലോ (kg)",
+    kgUnit: "കിലോ",
     marketValuePrefix: "കണക്കാക്കിയ വില: ₹",
     liveSensorsTitle: "തത്സമയ സെൻസർ അളവുകൾ",
     liveSensorsSubtitle: "IoT സെൻസറുകൾ വഴി ഓരോ 30 സെക്കൻഡിലും പുതുക്കുന്നു",
-    tempTitle: "താപനില (Temperature)",
+    tempTitle: "താപനില",
     tempIdealHint: "അനുയോജ്യമായ പരിധി: 33°C - 36°C",
-    humidityTitle: "ഈർപ്പം (Moisture / Humidity)",
+    humidityTitle: "ഈർപ്പം",
     humidityIdealHint: "അനുയോജ്യമായ പരിധി: 50% - 65%",
     diseaseTitle: "രോഗ, കീട പരിശോധന",
-    remedyBtn: "ചികിത്സ കാണുക ➔",
+    remedyBtn: "ചികിത്സ കാണുക ",
     colonyTitle: "തേനീച്ചകളുടെ പ്രവർത്തനം",
-    normalStatus: "സാധാരണം (Normal)",
-    activeStatus: "സജീവമാണ് (Active)",
-    noDisease: "രോഗരഹിതം (Clean)",
+    normalStatus: "സാധാരണം",
+    activeStatus: "സജീവമാണ്",
+    noDisease: "രോഗരഹിതം",
     diseaseAlert: "രോഗ മുന്നറിയിപ്പ്!",
     soundLabel: "ശബ്ദം: ",
     soundCalm: " (ശാന്തം)",
-    chipForaging: "🌸 പൂമ്പൊടി ശേഖരണം സജീവം",
-    chipQueen: "👑 റാണി ഈച്ച സുരക്ഷിതമാണ്",
-    chipSwarm: "⚠️ കൂട്ടം പിരിയൽ ഭീഷണി: ഇല്ല",
+    chipForaging: "പൂമ്പൊടി ശേഖരണം സജീവം",
+    chipQueen: "റാണി ഈച്ച സുരക്ഷിതമാണ്",
+    chipSwarm: "കൂട്ടം പിരിയൽ ഭീഷണി: ഇല്ല",
     needHelpTitle: "സഹായം വേണോ? KVIC വിദഗ്ദ്ധനോട് സംസാരിക്കുക",
     needHelpDesc: "സൗജന്യ ഉപദേശം, രോഗ നിർണ്ണയം, തേൻ വിപണന സഹായം",
     tollFreeLabel: "ടോൾ ഫ്രീ നമ്പർ: 1800-180-1551",
     timingLabel: "രാവിലെ 9:00 മുതൽ വൈകുന്നേരം 6:00 വരെ",
-    callBtn: "📞 വിളിക്കുക",
-    demoTitle: "സെൻസർ ടെസ്റ്റ് ടൂൾ (ഡെമോ)",
+    callBtn: "വിളിക്കുക",
+    demoTitle: "സെൻസർ ടെസ്റ്റ് ടൂൾ",
     demoHint: "വ്യത്യസ്ത സാഹചര്യങ്ങൾ പരിശോധിക്കാൻ ബട്ടൺ അമർത്തുക:",
-    demoNormal: "🟢 എല്ലാം സാധാരണമാണ്",
-    demoHeat: "🟡 കഠിനമായ ചൂട് (38°C Heat)",
-    demoDisease: "🔴 വരോവ രോഗ മുന്നറിയിപ്പ്",
-    demoHarvest: "🍯 തേൻ തയ്യാറാണ് (വിളവെടുപ്പ്!)",
+    demoNormal: "എല്ലാം സാധാരണമാണ്",
+    demoHeat: "കഠിനമായ ചൂട് (38°C)",
+    demoDisease: "വരോവ രോഗ മുന്നറിയിപ്പ്",
+    demoHarvest: "തേൻ തയ്യാറാണ്",
     voiceStart: "സംസാരിക്കുന്നു...",
     voiceFinished: "പൂർത്തിയായി",
     modalTitleSuffix: " പരിഹാര നിർദ്ദേശങ്ങൾ",
     modalSub: "KVIC അംഗീകൃത ചികിത്സാ രീതി",
-    modalOk: "മനസ്സിലായി (OK)",
+    modalOk: "മനസ്സിലായി",
     newHiveAdded: "പുതിയ പെട്ടി വിജയകരമായി ചേർത്തു!",
-    deleteModalTitle: "പെട്ടി ഇല്ലാതാക്കുക (Delete Hive)",
+    deleteModalTitle: "പെട്ടി ഇല്ലാതാക്കുക",
     deleteModalSub: "സ്ഥിരീകരണം ആവശ്യമാണ്",
     deletePrompt: "തീർച്ചയായും ഈ തേനീച്ച പെട്ടി ഇല്ലാതാക്കണമെന്നുണ്ടോ?",
     deleteIrreversible: "ഈ പെട്ടിയും സെൻസർ ഡാറ്റയും ശാശ്വതമായി നീക്കം ചെയ്യപ്പെടും.",
-    confirmDeleteBtn: "അതെ, ഇല്ലാതാക്കുക (Confirm Delete)",
-    cancelBtn: "റദ്ദാക്കുക (Cancel)",
-    cannotDeleteLast: "കുറഞ്ഞത് ഒരു പെട്ടിയെങ്കിലും സജീവമായി ഉണ്ടായിരിക്കണം."
+    confirmDeleteBtn: "അതെ, ഇല്ലാതാക്കുക",
+    cancelBtn: "റദ്ദാക്കുക",
+    cannotDeleteLast: "കുറഞ്ഞത് ഒരു പെട്ടിയെങ്കിലും സജീവമായി ഉണ്ടായിരിക്കണം.",
+    initiatedLabel: "തുടങ്ങിയ തീയതി:",
+    addHiveModalTitle: "പുതിയ പെട്ടി ചേർക്കുക",
+    addHiveModalSub: "പെട്ടിയുടെ പേരും തീയതിയും",
+    hiveNameLabel: "പെട്ടിയുടെ പേര്:",
+    hiveNamePlaceholder: "ഉദാ. പെട്ടി 4 (സൂര്യകാന്തി തോട്ടം)",
+    hiveNameHint: "തിരിച്ചറിയാൻ സ്ഥലമോ വിളയോ നൽകാം",
+    initiatedDateLabel: "തുടങ്ങിയ തീയതി:",
+    hiveDateHint: "പെട്ടി സ്ഥാപിച്ച തീയതി",
+    addBoxConfirmBtn: "+ പെട്ടി ചേർക്കുക",
+    emptyNameAlert: "ദയവായി പെട്ടിയുടെ പേര് നൽകുക.",
+    hiveBoxesBtn: "പെട്ടികൾ",
+    allHivesModalTitle: "നിങ്ങളുടെ തേനീച്ച പെട്ടികൾ",
+    allHivesModalSub: "കാണാൻ ഏതെങ്കിലും പെട്ടിയിൽ തൊടുക",
+    closeBtn: "അടയ്ക്കുക",
+    drawerProfileTitle: "തേനീച്ച വളർത്തുകാരൻ പ്രൊഫൈൽ",
+    drawerViewProfile: "പ്രൊഫൈൽ കാണുക",
+    drawerViewDetailsClose: "വിശദാംശങ്ങൾ മറയ്ക്കുക",
+    drawerCertifiedBadge: "സർട്ടിഫൈഡ് വളർത്തുകാരൻ",
+    drawerHives: "എന്റെ തേനീച്ച പെട്ടികൾ",
+    drawerLanguage: "ഭാഷ തിരഞ്ഞെടുക്കുക",
+    drawerTerms: "നിബന്ധനകളും വ്യവസ്ഥകളും",
+    drawerPrivacy: "സ്വകാര്യതാ നയം",
+    drawerContact: "ഞങ്ങളെ ബന്ധപ്പെടുക & പിന്തുണ",
+    drawerLogout: "ലോഗ് ഔട്ട്",
+    drawerNameLabel: "വളർത്തുകാരന്റെ പേര്",
+    drawerRegIdLabel: "KVIC രജിസ്ട്രേഷൻ ഐഡി",
+    drawerLocationLabel: "സ്ഥലം",
+    drawerLocationVal: "സഹാരൻപൂർ, ഉത്തർപ്രദേശ്",
+    drawerActiveBoxesLabel: "സജീവ പെട്ടികൾ",
+    drawerMissionLabel: "മിഷൻ സർട്ടിഫിക്കേഷൻ",
+    drawerFollowUs: "ദേശീയ തേനീച്ച മിഷൻ • ഭാരത സർക്കാർ",
+    lightModeLabel: "ലൈറ്റ് മോഡ്",
+    activeBoxesSuffix: "സജീവ പെട്ടികൾ",
+    termsModalTitle: "നിബന്ധനകളും വ്യവസ്ഥകളും",
+    privacyModalTitle: "സ്വകാര്യതാ നയം",
+    contactModalTitle: "സഹായ കേന്ദ്രം"
   }
 };
 
 const languagesMeta = {
-  en: { name: "English", flag: "🇬🇧", speechLang: "en-IN", ttsCode: "en" },
-  hi: { name: "हिंदी", flag: "🇮🇳", speechLang: "hi-IN", ttsCode: "hi" },
-  ta: { name: "தமிழ்", flag: "🇮🇳", speechLang: "ta-IN", ttsCode: "ta" },
-  te: { name: "తెలుగు", flag: "🇮🇳", speechLang: "te-IN", ttsCode: "te" },
-  kn: { name: "ಕನ್ನಡ", flag: "🇮🇳", speechLang: "kn-IN", ttsCode: "kn" },
-  ml: { name: "മലയാളം", flag: "🇮🇳", speechLang: "ml-IN", ttsCode: "ml" }
+  en: { name: "English", flag: "", speechLang: "en-IN", ttsCode: "en" },
+  hi: { name: "हिंदी", flag: "", speechLang: "hi-IN", ttsCode: "hi" },
+  ta: { name: "தமிழ்", flag: "", speechLang: "ta-IN", ttsCode: "ta" },
+  te: { name: "తెలుగు", flag: "", speechLang: "te-IN", ttsCode: "te" },
+  kn: { name: "ಕನ್ನಡ", flag: "", speechLang: "kn-IN", ttsCode: "kn" },
+  ml: { name: "മലയാളം", flag: "", speechLang: "ml-IN", ttsCode: "ml" }
 };
 
 let currentLang = localStorage.getItem('kvic_beekeeper_lang') || 'hi';
@@ -520,12 +678,12 @@ const hivesData = [
       ml: "രോഗമില്ല - സുരക്ഷിതമായ പെട്ടി"
     },
     diseaseRemedyPreview: {
-      en: "✅ No Varroa mites or fungus found. Colony is robust and healthy.",
-      hi: "✅ कोई वरोआ माइट (Mites) या फफूंदी नहीं मिली। रानी मक्खी सुरक्षित है।",
-      ta: "✅ வரோவா பூச்சிகள் அல்லது பூஞ்சை இல்லை. ராணி பாதுகாப்பாக உள்ளது.",
-      te: "✅ వరోవా మైట్స్ లేదా ఫంగస్ కనిపించలేదు. రాణి ఈగ సురక్షితం.",
-      kn: "✅ ಯಾವುದೇ ವರೋವಾ ಮಿಟೆ ಅಥವಾ ಶಿಲೀಂಧ್ರ ಕಂಡುಬಂದಿಲ್ಲ. ರಾಣಿ ಸುರಕ್ಷಿತವಾಗಿದೆ.",
-      ml: "✅ വരോവ മൈറ്റുകളോ ഫംഗസോ കണ്ടെത്തിയില്ല. റാണി സുരക്ഷിതമാണ്."
+      en: "No Varroa mites or fungus found. Colony is robust and healthy.",
+      hi: "कोई वरोआ माइट (Mites) या फफूंदी नहीं मिली। रानी मक्खी सुरक्षित है।",
+      ta: "வரோவா பூச்சிகள் அல்லது பூஞ்சை இல்லை. ராணி பாதுகாப்பாக உள்ளது.",
+      te: "వరోవా మైట్స్ లేదా ఫంగస్ కనిపించలేదు. రాణి ఈగ సురక్షితం.",
+      kn: "ಯಾವುದೇ ವರೋವಾ ಮಿಟೆ ಅಥವಾ ಶಿಲೀಂಧ್ರ ಕಂಡುಬಂದಿಲ್ಲ. ರಾಣಿ ಸುರಕ್ಷಿತವಾಗಿದೆ.",
+      ml: "വരോവ മൈറ്റുകളോ ഫംഗസോ കണ്ടെത്തിയില്ല. റാണി സുരക്ഷിതമാണ്."
     },
     remedySteps: {
       en: [
@@ -638,12 +796,12 @@ const hivesData = [
       ml: "ചെറിയ ചൂട് സമ്മർദ്ദം (Heat Stress)"
     },
     diseaseRemedyPreview: {
-      en: "⚠️ High sun exposure. Immediate shading & water recommended.",
-      hi: "⚠️ अधिक धूप के कारण पेटी गर्म है। तुरंत छाया का प्रबंध करें।",
-      ta: "⚠️ கடுமையான வெயில் படுகிறது. உடனே நிழல் அமைக்கவும்.",
-      te: "⚠️ తీవ్రమైన ఎండ తగులుతోంది. వెంటనే నీడను ఏర్పాటు చేయండి.",
-      kn: "⚠️ ಬಿಸಿಲು ಹೆಚ್ಚಾಗಿದೆ. ತಕ್ಷಣ ನೆರಳಿನ ವ್ಯವಸ್ಥೆ ಮಾಡಿ.",
-      ml: "⚠️ ശക്തമായ വെയിൽ ഏൽക്കുന്നു. ഉടൻ തണൽ ക്രമീകരിക്കുക."
+      en: "High sun exposure. Immediate shading & water recommended.",
+      hi: "अधिक धूप के कारण पेटी गर्म है। तुरंत छाया का प्रबंध करें।",
+      ta: "கடுமையான வெயில் படுகிறது. உடனே நிழல் அமைக்கவும்.",
+      te: "తీవ్రమైన ఎండ తగులుతోంది. వెంటనే నీడను ఏర్పాటు చేయండి.",
+      kn: "ಬಿಸಿಲು ಹೆಚ್ಚಾಗಿದೆ. ತಕ್ಷಣ ನೆರಳಿನ ವ್ಯವಸ್ಥೆ ಮಾಡಿ.",
+      ml: "ശക്തമായ വെയിൽ ഏൽക്കുന്നു. ഉടൻ തണൽ ക്രമീകരിക്കുക."
     },
     remedySteps: {
       en: [
@@ -756,12 +914,12 @@ const hivesData = [
       ml: "വരോവ പരാദ കീടം (Varroa Mite)"
     },
     diseaseRemedyPreview: {
-      en: "🚨 Red parasitic mites spotted. Immediate thymol strip treatment required!",
-      hi: "🚨 पेटी में लाल परजीवी माइट्स पाए गए हैं। तुरंत थाइमोल स्ट्रिप उपचार करें!",
-      ta: "🚨 தேனீக்களில் சிவப்பு ஒட்டுண்ணி பூச்சிகள் உள்ளன. உடனே தைமால் இடவும்!",
-      te: "🚨 ఈగలపై ఎర్రటి పురుగులు కనిపించాయి. వెంటనే చికిత్స ప్రారంభించండి!",
-      kn: "🚨 ಜೇನುನೊಣಗಳ ಮೈಮೇಲೆ ಕೆಂಪು ಕೀಟಗಳು ಕಂಡುಬಂದಿವೆ. ತಕ್ಷಣ ಚಿಕಿತ್ಸೆ ನೀಡಿ!",
-      ml: "🚨 തേനീച്ചകളിൽ ചുവന്ന പരാദ കീടങ്ങൾ കാണപ്പെടുന്നു. ഉടൻ ചികിത്സിക്കുക!"
+      en: "Red parasitic mites spotted. Immediate thymol strip treatment required!",
+      hi: "पेटी में लाल परजीवी माइट्स पाए गए हैं। तुरंत थाइमोल स्ट्रिप उपचार करें!",
+      ta: "தேனீக்களில் சிவப்பு ஒட்டுண்ணி பூச்சிகள் உள்ளன. உடனே தைமால் இடவும்!",
+      te: "ఈగలపై ఎర్రటి పురుగులు కనిపించాయి. వెంటనే చికిత్స ప్రారంభించండి!",
+      kn: "ಜೇನುನೊಣಗಳ ಮೈಮೇಲೆ ಕೆಂಪು ಕೀಟಗಳು ಕಂಡುಬಂದಿವೆ. ತಕ್ಷಣ ಚಿಕಿತ್ಸೆ ನೀಡಿ!",
+      ml: "തേനീച്ചകളിൽ ചുവന്ന പരാദ കീടങ്ങൾ കാണപ്പെടുന്നു. ഉടൻ ചികിത്സിക്കുക!"
     },
     remedySteps: {
       en: [
@@ -839,7 +997,7 @@ let isSpeaking = false;
 
 if (synth && typeof synth.addEventListener === 'function') {
   synth.addEventListener('voiceschanged', () => {
-    try { synth.getVoices(); } catch (e) {}
+    try { synth.getVoices(); } catch (e) { }
   });
 }
 
@@ -867,7 +1025,7 @@ function formatHiveDate(dateStr, lang) {
         return d.toLocaleDateString(loc, { day: '2-digit', month: 'short', year: 'numeric' });
       }
     }
-  } catch(e) {}
+  } catch (e) { }
   return dateStr;
 }
 
@@ -908,7 +1066,7 @@ function selectLanguage(langCode) {
 // Apply chosen language to UI
 function applyLanguage(langCode) {
   const meta = languagesMeta[langCode] || languagesMeta['hi'];
-  
+
   // Update button label and flag
   const currentLangLabel = document.getElementById('currentLangLabel');
   const currentLangFlag = document.getElementById('currentLangFlag');
@@ -936,6 +1094,16 @@ function applyLanguage(langCode) {
   // Re-render components with language text
   renderHiveTabs();
   renderCurrentHive();
+
+  const profileCurrentLangName = document.getElementById('profileCurrentLangName');
+  if (profileCurrentLangName) {
+    const meta = languagesMeta[langCode] || languagesMeta['hi'];
+    profileCurrentLangName.textContent = meta.name;
+  }
+
+  if (typeof updateStarterScreenUI === 'function') {
+    updateStarterScreenUI(langCode);
+  }
 }
 
 // Pending hive ID to delete
@@ -944,7 +1112,7 @@ let pendingDeleteHiveId = null;
 // Select Hive & bring recently viewed hive to front of dashboard
 function selectHive(hiveId) {
   selectedHiveId = hiveId;
-  
+
   // Bring the recently viewed hive in front of hive box dashboard
   const idx = hivesData.findIndex(h => h.id === hiveId);
   if (idx > 0) {
@@ -977,7 +1145,7 @@ function renderHiveTabs() {
     tab.className = `hive-tab ${hive.id === selectedHiveId ? 'active' : ''}`;
     tab.setAttribute('role', 'button');
     tab.setAttribute('tabindex', '0');
-    
+
     let dotClass = '';
     if (hive.statusLevel === 'warn') dotClass = 'warn';
     if (hive.statusLevel === 'danger') dotClass = 'alert';
@@ -988,9 +1156,9 @@ function renderHiveTabs() {
       <span class="hive-tab-dot ${dotClass}"></span>
       <div class="hive-tab-info">
         <span class="hive-tab-label">${hiveName}</span>
-        <span class="hive-tab-date"><span class="cal-icon">📅</span> ${formattedDate}</span>
+        <span class="hive-tab-date"><span class="cal-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></span> ${formattedDate}</span>
       </div>
-      <button class="hive-delete-btn" type="button" title="Delete ${hiveName}" data-hive-id="${hive.id}" aria-label="Delete ${hiveName}">✕</button>
+      <button class="hive-delete-btn" type="button" title="Delete ${hiveName}" data-hive-id="${hive.id}" aria-label="Delete ${hiveName}"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
     `;
 
     // Click tab to select hive and bring it to front
@@ -1105,20 +1273,16 @@ function renderCurrentHive() {
   const tipElem = document.getElementById('farmerTipText');
   if (tipElem) tipElem.textContent = getHiveText(hive, 'tip');
 
-  // Emoji indicator
-  const emojiElem = document.getElementById('conditionEmoji');
+  // Dynamic Glowing Status Beacon (No emojis)
   const emojiBox = document.getElementById('conditionEmojiBox');
-  if (emojiElem && emojiBox) {
-    if (hive.statusLevel === 'safe') {
-      emojiElem.textContent = '🟢';
-      emojiBox.style.background = 'var(--color-safe-green-light)';
-    } else if (hive.statusLevel === 'warn') {
-      emojiElem.textContent = '🟡';
-      emojiBox.style.background = 'var(--color-warn-light)';
-    } else {
-      emojiElem.textContent = '🔴';
-      emojiBox.style.background = 'var(--color-danger-light)';
-    }
+  if (emojiBox) {
+    emojiBox.className = `condition-beacon-wrap beacon-${hive.statusLevel}`;
+    emojiBox.innerHTML = `
+      <div class="beacon-pulse-core"></div>
+      <div class="beacon-pulse-ring ring-1"></div>
+      <div class="beacon-pulse-ring ring-2"></div>
+      <div class="beacon-pulse-ring ring-3"></div>
+    `;
   }
 
   // Green to Red Gradient cursor line position
@@ -1171,7 +1335,7 @@ function renderCurrentHive() {
       tempBadge.textContent = dict.normalStatus;
     } else {
       tempBadge.className = 'metric-status-badge status-warn';
-      tempBadge.textContent = dict.warningLabel.replace(/^[🟢🟡🔴]\s*/, '');
+      tempBadge.textContent = dict.warningLabel;
     }
   }
   if (tempRangeFill) {
@@ -1190,7 +1354,7 @@ function renderCurrentHive() {
       humBadge.textContent = dict.normalStatus;
     } else {
       humBadge.className = 'metric-status-badge status-warn';
-      humBadge.textContent = dict.warningLabel.replace(/^[🟢🟡🔴]\s*/, '');
+      humBadge.textContent = dict.warningLabel;
     }
   }
   if (humRangeFill) {
@@ -1214,7 +1378,7 @@ function renderCurrentHive() {
       diseaseBadge.textContent = dict.diseaseAlert;
     }
     if (diseaseIconWrap) diseaseIconWrap.className = 'metric-icon-bubble temp-bg';
-    if (diseaseIcon) diseaseIcon.textContent = '🚨';
+    if (diseaseIcon) diseaseIcon.textContent = '';
     if (diseaseRemedy) diseaseRemedy.style.borderLeftColor = 'var(--color-danger-red)';
     if (remedyBtn) remedyBtn.classList.remove('hidden');
   } else {
@@ -1223,7 +1387,7 @@ function renderCurrentHive() {
       diseaseBadge.textContent = dict.noDisease;
     }
     if (diseaseIconWrap) diseaseIconWrap.className = 'metric-icon-bubble disease-bg';
-    if (diseaseIcon) diseaseIcon.textContent = '🛡️';
+    if (diseaseIcon) diseaseIcon.innerHTML = `<svg class="metric-svg-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#10B981" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>`;
     if (diseaseRemedy) diseaseRemedy.style.borderLeftColor = 'var(--color-safe-green)';
     if (remedyBtn) remedyBtn.classList.add('hidden');
   }
@@ -1248,7 +1412,7 @@ function showToast(message) {
     toast.className = 'toast-notification';
     document.body.appendChild(toast);
   }
-  toast.innerHTML = `<span>✨</span><span>${message}</span>`;
+  toast.innerHTML = `<span class="toast-check-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>${message}</span>`;
   toast.classList.add('show');
   clearTimeout(toast._timer);
   toast._timer = setTimeout(() => {
@@ -1293,7 +1457,7 @@ function playOnlineTTS(text, langCode, onStart, onEnd) {
     const url = `https://translate.google.com/translate_tts?ie=UTF-8&tl=${encodeURIComponent(langCode)}&client=tw-ob&q=${encodeURIComponent(currentText)}`;
 
     if (currentAudio) {
-      try { currentAudio.pause(); } catch(e) {}
+      try { currentAudio.pause(); } catch (e) { }
     }
     currentAudio = new Audio(url);
 
@@ -1395,11 +1559,11 @@ function announceCurrentState() {
     nativeVoice = voices.find(v => {
       const langLower = (v.lang || '').toLowerCase();
       const nameLower = (v.name || '').toLowerCase();
-      return langLower.startsWith(targetPrefix) || 
-             langLower.includes(`-${targetPrefix}`) ||
-             nameLower.includes(meta.name.toLowerCase()) ||
-             (targetPrefix === 'hi' && (langLower.startsWith('hi') || nameLower.includes('hindi'))) ||
-             (targetPrefix === 'en' && langLower.startsWith('en'));
+      return langLower.startsWith(targetPrefix) ||
+        langLower.includes(`-${targetPrefix}`) ||
+        nameLower.includes(meta.name.toLowerCase()) ||
+        (targetPrefix === 'hi' && (langLower.startsWith('hi') || nameLower.includes('hindi'))) ||
+        (targetPrefix === 'en' && langLower.startsWith('en'));
     });
   }
 
@@ -1431,13 +1595,13 @@ function announceCurrentState() {
 function stopSpeech() {
   isSpeaking = false;
   if (synth) {
-    try { synth.cancel(); } catch (e) {}
+    try { synth.cancel(); } catch (e) { }
   }
   if (currentAudio) {
     try {
       currentAudio.pause();
       currentAudio.currentTime = 0;
-    } catch (e) {}
+    } catch (e) { }
     currentAudio = null;
   }
   const audioBanner = document.getElementById('audioBanner');
@@ -1497,7 +1661,7 @@ function renderAllHivesModalList() {
     const isSelected = hive.id === selectedHiveId;
     const card = document.createElement('div');
     card.className = `hive-list-item-card ${isSelected ? 'active-selection' : ''}`;
-    
+
     let dotClass = '';
     if (hive.statusLevel === 'warn') dotClass = 'warn';
     if (hive.statusLevel === 'danger') dotClass = 'alert';
@@ -1511,19 +1675,19 @@ function renderAllHivesModalList() {
         <div class="hive-item-top">
           <span class="hive-tab-dot ${dotClass}"></span>
           <span class="hive-item-name">${hiveName}</span>
-          ${isSelected ? `<span class="current-selected-pill">✓ ${dict.activeStatus || "सक्रिय (Active)"}</span>` : ''}
+          ${isSelected ? `<span class="current-selected-pill"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> ${dict.activeStatus || "Active"}</span>` : ''}
         </div>
         <div class="hive-item-details">
-          <span>📅 ${dict.initiatedLabel || "स्थापना:"} ${formattedDate}</span>
-          <span class="hive-item-health ${dotClass}">🟢 ${hive.score}% • ${statusText}</span>
-          <span>🌡️ ${hive.temp}°C • 💧 ${hive.humidity}%</span>
+          <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg> ${dict.initiatedLabel || "Initiated:"} ${formattedDate}</span>
+          <span class="hive-item-health ${dotClass}"><span class="mini-health-beacon ${dotClass}"></span> ${hive.score}% • ${statusText}</span>
+          <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"></path></svg> ${hive.temp}°C • <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg> ${hive.humidity}%</span>
         </div>
       </div>
       <div class="hive-item-actions">
-        ${isSelected 
-          ? `<span class="selected-check-icon">✓</span>` 
-          : `<button type="button" class="select-box-btn">${currentLang === 'hi' ? 'चुनें (Select)' : 'Select'}</button>`
-        }
+        ${isSelected
+        ? `<span class="selected-check-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>`
+        : `<button type="button" class="select-box-btn">${currentLang === 'hi' ? 'चुनें' : 'Select'}</button>`
+      }
       </div>
     `;
 
@@ -1608,12 +1772,12 @@ function handleAddNewHiveSubmit() {
       ml: "രോഗമില്ല - സുരക്ഷിതമായ പെട്ടി"
     },
     diseaseRemedyPreview: {
-      en: "✅ All health parameters safe and optimal.",
-      hi: "✅ सभी स्वास्थ्य मानक सामान्य हैं।",
-      ta: "✅ அனைத்து அளவீடுகளும் பாதுகாப்பாக உள்ளன.",
-      te: "✅ అన్ని ఆరోగ్య పారామితులు సాధారణం.",
-      kn: "✅ ಎಲ್ಲಾ ಆರೋಗ್ಯ ನಿಯತಾಂಕಗಳು ಸಹಜವಾಗಿವೆ.",
-      ml: "✅ എല്ലാ പാരാമീറ്ററുകളും സുരക്ഷിതമാണ്."
+      en: "All health parameters safe and optimal.",
+      hi: "सभी स्वास्थ्य मानक सामान्य हैं।",
+      ta: "அனைத்து அளவீடுகளும் பாதுகாப்பாக உள்ளன.",
+      te: "అన్ని ఆరోగ్య పారామితులు సాధారణం.",
+      kn: "ಎಲ್ಲಾ ಆರೋಗ್ಯ ನಿಯತಾಂಕಗಳು ಸಹಜವಾಗಿವೆ.",
+      ml: "എല്ലാ പാരാമീറ്ററുകളും സുരക്ഷിതമാണ്."
     },
     remedySteps: {
       en: ["Continue regular inspection without disturbance."],
@@ -1744,32 +1908,152 @@ function setupEventListeners() {
     });
   }
 
-  // Beekeeper Profile Modal triggers
+  // Beekeeper Profile Side Navigation Drawer triggers (Ref: Image 2)
   const userProfileBtn = document.getElementById('userProfileBtn');
   const userProfileModal = document.getElementById('userProfileModal');
   const closeProfileModalBtn = document.getElementById('closeProfileModalBtn');
-  const closeProfileModalFooterBtn = document.getElementById('closeProfileModalFooterBtn');
   const profileHiveCount = document.getElementById('profileHiveCount');
+  const drawerDetailHiveCount = document.getElementById('drawerDetailHiveCount');
+
+  const updateProfileHubData = () => {
+    const userName = localStorage.getItem('kvic_user_name') || 'Ram Kumar';
+    const userPhone = localStorage.getItem('kvic_user_phone') || '9876543210';
+    const profileModalUserName = document.getElementById('profileModalUserName');
+    const profileModalUserPhone = document.getElementById('profileModalUserPhone');
+    const profileBeekeeperName = document.getElementById('profileBeekeeperName');
+    const profileCurrentLangName = document.getElementById('profileCurrentLangName');
+
+    if (profileModalUserName) profileModalUserName.textContent = userName;
+    if (profileBeekeeperName) profileBeekeeperName.textContent = userName;
+    if (profileModalUserPhone) {
+      profileModalUserPhone.innerHTML = `+91 ${userPhone} • <span class="badge-id">KVIC-UP-2026-8841</span>`;
+    }
+    if (profileCurrentLangName) {
+      const meta = languagesMeta[currentLang] || languagesMeta['hi'];
+      profileCurrentLangName.textContent = meta.name;
+    }
+    const dict = i18n[currentLang] || i18n['hi'];
+    const suffix = dict.activeBoxesSuffix || 'Boxes Active';
+    const hiveText = `${hivesData.length} ${suffix}`;
+    if (profileHiveCount) profileHiveCount.textContent = hiveText;
+    if (drawerDetailHiveCount) drawerDetailHiveCount.textContent = hiveText;
+  };
 
   const openProfileModal = () => {
     if (userProfileModal) {
-      if (profileHiveCount) {
-        profileHiveCount.textContent = `${hivesData.length} ${currentLang === 'hi' ? 'पेटियाँ (Active)' : 'Boxes (Active)'}`;
-      }
+      updateProfileHubData();
       userProfileModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
     }
   };
 
   const closeProfileModal = () => {
-    if (userProfileModal) userProfileModal.classList.add('hidden');
+    if (userProfileModal) {
+      userProfileModal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
   };
 
   if (userProfileBtn) userProfileBtn.addEventListener('click', openProfileModal);
   if (closeProfileModalBtn) closeProfileModalBtn.addEventListener('click', closeProfileModal);
-  if (closeProfileModalFooterBtn) closeProfileModalFooterBtn.addEventListener('click', closeProfileModal);
   if (userProfileModal) {
     userProfileModal.addEventListener('click', (e) => {
       if (e.target === userProfileModal) closeProfileModal();
+    });
+  }
+
+  // Toggle Beekeeper Profile Details inside Drawer
+  const toggleProfileDetailsBtn = document.getElementById('toggleProfileDetailsBtn');
+  const profileDetailsDrawer = document.getElementById('profileDetailsDrawer');
+  const profileDetailsChevron = document.getElementById('profileDetailsChevron');
+  const viewProfileBtnLabel = document.getElementById('viewProfileBtnLabel');
+  if (toggleProfileDetailsBtn && profileDetailsDrawer) {
+    toggleProfileDetailsBtn.addEventListener('click', () => {
+      const isHidden = profileDetailsDrawer.classList.toggle('hidden');
+      if (profileDetailsChevron) {
+        profileDetailsChevron.classList.toggle('open', !isHidden);
+      }
+      if (viewProfileBtnLabel) {
+        const dict = i18n[currentLang] || i18n['hi'];
+        viewProfileBtnLabel.textContent = isHidden ? dict.drawerViewProfile : dict.drawerViewDetailsClose;
+      }
+    });
+  }
+
+  // My Hive Boxes Drawer item
+  const drawerHiveBoxesBtn = document.getElementById('drawerHiveBoxesBtn');
+  if (drawerHiveBoxesBtn) {
+    drawerHiveBoxesBtn.addEventListener('click', () => {
+      closeProfileModal();
+      openSelectHiveModal();
+    });
+  }
+
+  // Select Language Drawer item
+  const openLangFromProfileBtn = document.getElementById('openLangFromProfileBtn');
+  if (openLangFromProfileBtn) {
+    openLangFromProfileBtn.addEventListener('click', () => {
+      closeProfileModal();
+      if (typeof openLanguageStarterScreen === 'function') {
+        openLanguageStarterScreen();
+      }
+    });
+  }
+
+  // Terms & Conditions Modal
+  const drawerTermsBtn = document.getElementById('drawerTermsBtn');
+  const termsModal = document.getElementById('termsModal');
+  const closeTermsModalBtn = document.getElementById('closeTermsModalBtn');
+  const closeTermsFooterBtn = document.getElementById('closeTermsFooterBtn');
+  if (drawerTermsBtn && termsModal) {
+    drawerTermsBtn.addEventListener('click', () => {
+      closeProfileModal();
+      termsModal.classList.remove('hidden');
+    });
+  }
+  if (closeTermsModalBtn) closeTermsModalBtn.addEventListener('click', () => termsModal.classList.add('hidden'));
+  if (closeTermsFooterBtn) closeTermsFooterBtn.addEventListener('click', () => termsModal.classList.add('hidden'));
+  if (termsModal) {
+    termsModal.addEventListener('click', (e) => {
+      if (e.target === termsModal) termsModal.classList.add('hidden');
+    });
+  }
+
+  // Privacy Policy Modal
+  const drawerPrivacyBtn = document.getElementById('drawerPrivacyBtn');
+  const privacyModal = document.getElementById('privacyModal');
+  const closePrivacyModalBtn = document.getElementById('closePrivacyModalBtn');
+  const closePrivacyFooterBtn = document.getElementById('closePrivacyFooterBtn');
+  if (drawerPrivacyBtn && privacyModal) {
+    drawerPrivacyBtn.addEventListener('click', () => {
+      closeProfileModal();
+      privacyModal.classList.remove('hidden');
+    });
+  }
+  if (closePrivacyModalBtn) closePrivacyModalBtn.addEventListener('click', () => privacyModal.classList.add('hidden'));
+  if (closePrivacyFooterBtn) closePrivacyFooterBtn.addEventListener('click', () => privacyModal.classList.add('hidden'));
+  if (privacyModal) {
+    privacyModal.addEventListener('click', (e) => {
+      if (e.target === privacyModal) privacyModal.classList.add('hidden');
+    });
+  }
+
+  // Contact Us & Support Modal
+  const drawerContactBtn = document.getElementById('drawerContactBtn');
+  const contactSupportModal = document.getElementById('contactSupportModal');
+  const closeContactModalBtn = document.getElementById('closeContactModalBtn');
+  const closeContactFooterBtn = document.getElementById('closeContactFooterBtn');
+  if (drawerContactBtn && contactSupportModal) {
+    drawerContactBtn.addEventListener('click', () => {
+      closeProfileModal();
+      contactSupportModal.classList.remove('hidden');
+    });
+  }
+  if (closeContactModalBtn) closeContactModalBtn.addEventListener('click', () => contactSupportModal.classList.add('hidden'));
+  if (closeContactFooterBtn) closeContactFooterBtn.addEventListener('click', () => contactSupportModal.classList.add('hidden'));
+  if (contactSupportModal) {
+    contactSupportModal.addEventListener('click', (e) => {
+      if (e.target === contactSupportModal) contactSupportModal.classList.add('hidden');
     });
   }
 
@@ -1812,8 +2096,8 @@ function setupEventListeners() {
     const diseaseTitle = getHiveText(hive, 'diseaseName');
     modalTitle.textContent = `${diseaseTitle}${dict.modalTitleSuffix || " Guide"}`;
 
-    const steps = (hive.remedySteps && hive.remedySteps[currentLang]) 
-      ? hive.remedySteps[currentLang] 
+    const steps = (hive.remedySteps && hive.remedySteps[currentLang])
+      ? hive.remedySteps[currentLang]
       : (hive.remedySteps ? hive.remedySteps['en'] : []);
 
     modalBody.innerHTML = steps.map((step, idx) => `
@@ -1869,6 +2153,12 @@ function setupEventListeners() {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeDeleteHiveModal();
   });
+
+  // Language Starter Welcome Screen Setup
+  setupLanguageStarterScreen();
+
+  // Auth & OTP Screen Setup
+  setupAuthScreen();
 }
 
 // --- APPLY DEMO SCENARIOS ---
@@ -2016,3 +2306,393 @@ function applyDemoScenario(scenario) {
   renderCurrentHive();
   stopSpeech();
 }
+
+// ==========================================================================
+// STARTING WELCOME SCREEN: LANGUAGE SELECTION CONTROLLER
+// ==========================================================================
+
+const starterScreenLocales = {
+  en: {
+    title: "What is your language?",
+    sub: "Select your preferred language to continue",
+    confirmLabel: "Confirm",
+    confirmSub: "Continue"
+  },
+  hi: {
+    title: "आपकी भाषा क्या है?",
+    sub: "आगे बढ़ने के लिए अपनी पसंदीदा भाषा चुनें",
+    confirmLabel: "पुष्टि करें",
+    confirmSub: "आगे बढ़ें"
+  },
+  ta: {
+    title: "உங்கள் மொழி எது?",
+    sub: "தொடர உங்கள் விருப்பமான மொழியைத் தேர்ந்தெடுக்கவும்",
+    confirmLabel: "உறுதிப்படுத்துக",
+    confirmSub: "தொடரவும்"
+  },
+  te: {
+    title: "మీ భాష ఏమిటి?",
+    sub: "కొనసాగడానికి మీ ప్రాధాన్యత గల భాషను ఎంచుకోండి",
+    confirmLabel: "ధృవీకరించండి",
+    confirmSub: "ముందుకు సాగండి"
+  },
+  kn: {
+    title: "ನಿಮ್ಮ ಭಾಷೆ ಯಾವುದು?",
+    sub: "ಮುಂದುವರಿಯಲು ನಿಮ್ಮ ಆದ್ಯತೆಯ ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+    confirmLabel: "ಖಚಿತಪಡಿಸಿ",
+    confirmSub: "ಮುಂದುವರಿಯಿರಿ"
+  },
+  ml: {
+    title: "നിങ്ങളുടെ ഭാഷ ഏതാണ്?",
+    sub: "തുടരാൻ നിങ്ങളുടെ മുൻഗണനാ ഭാഷ തിരഞ്ഞെടുക്കുക",
+    confirmLabel: "സ്ഥിരീകരിക്കുക",
+    confirmSub: "തുടരുക"
+  }
+};
+
+let tempStarterSelectedLang = currentLang || 'hi';
+
+function updateStarterScreenUI(langCode) {
+  tempStarterSelectedLang = langCode;
+  const loc = starterScreenLocales[langCode] || starterScreenLocales['en'];
+
+  // Update card active states & ARIA checked attribute
+  const cards = document.querySelectorAll('.starter-lang-card');
+  cards.forEach(card => {
+    const isSelected = card.getAttribute('data-lang') === langCode;
+    card.classList.toggle('selected', isSelected);
+    card.setAttribute('aria-checked', isSelected ? 'true' : 'false');
+  });
+
+  // Dynamic header text updates
+  const titleEl = document.getElementById('starterSectionTitle');
+  const subEl = document.getElementById('starterSectionSubtitle');
+  if (titleEl) titleEl.textContent = loc.title;
+  if (subEl) subEl.textContent = loc.sub;
+
+  // Dynamic confirm button updates
+  const labelEl = document.getElementById('starterConfirmLabel');
+  const confirmSubEl = document.getElementById('starterConfirmSub');
+  if (labelEl) labelEl.textContent = loc.confirmLabel;
+  if (confirmSubEl) confirmSubEl.textContent = loc.confirmSub;
+}
+
+function openLanguageStarterScreen() {
+  const starter = document.getElementById('langStarterScreen');
+  if (!starter) return;
+  starter.style.display = 'flex';
+  void starter.offsetWidth; // Force layout recalculation
+  starter.classList.remove('dismissed');
+  updateStarterScreenUI(currentLang);
+}
+
+function closeLanguageStarterScreen() {
+  const starter = document.getElementById('langStarterScreen');
+  if (!starter) return;
+  starter.classList.add('dismissed');
+  setTimeout(() => {
+    starter.style.display = 'none';
+  }, 400);
+}
+
+function setupLanguageStarterScreen() {
+  const starter = document.getElementById('langStarterScreen');
+  if (!starter) return;
+
+  // Sync initial language selection
+  updateStarterScreenUI(currentLang);
+
+  // Language cards interactive click selection
+  const cards = document.querySelectorAll('.starter-lang-card');
+  cards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      e.preventDefault();
+      const chosenLang = card.getAttribute('data-lang');
+      if (chosenLang) {
+        updateStarterScreenUI(chosenLang);
+      }
+    });
+  });
+
+  // Confirm button click -> leads to Login Screen
+  const confirmBtn = document.getElementById('starterConfirmBtn');
+  if (confirmBtn) {
+    confirmBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      selectLanguage(tempStarterSelectedLang);
+      closeLanguageStarterScreen();
+      openAuthScreen();
+    });
+  }
+
+  // Dropdown "Change Language / भाषा बदलें" option click
+  const reopenBtn = document.getElementById('reopenStarterScreenBtn');
+  if (reopenBtn) {
+    reopenBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const menu = document.getElementById('langDropdownMenu');
+      const wrapper = document.getElementById('langDropdownWrapper');
+      if (menu) menu.classList.add('hidden');
+      if (wrapper) wrapper.classList.remove('open');
+      openLanguageStarterScreen();
+    });
+  }
+
+  // Also support clicking current language flag/badge to easily reopen
+  const langToggleBtn = document.getElementById('langToggleBtn');
+  if (langToggleBtn) {
+    langToggleBtn.setAttribute('title', 'Change Language / भाषा बदलें');
+  }
+
+  // Expose globally for any trigger
+  window.openLanguageStarterScreen = openLanguageStarterScreen;
+  window.closeLanguageStarterScreen = closeLanguageStarterScreen;
+}
+
+// ==========================================================================
+// AUTH SCREEN CONTROLLER: LOGIN (NAME & PHONE) & OTP VERIFICATION
+// ==========================================================================
+
+let resendTimerInterval = null;
+
+function openAuthScreen() {
+  const authScreen = document.getElementById('authScreen');
+  if (!authScreen) return;
+
+  // Reset to Step 1 (Name & Phone)
+  const stepPhone = document.getElementById('authStepPhone');
+  const stepOtp = document.getElementById('authStepOtp');
+  if (stepPhone) stepPhone.classList.add('active');
+  if (stepOtp) stepOtp.classList.remove('active');
+
+  // Prepopulate saved user info if available
+  const savedName = localStorage.getItem('kvic_user_name') || 'Ram Kumar';
+  const savedPhone = localStorage.getItem('kvic_user_phone') || '9876543210';
+  const nameInput = document.getElementById('authUserName');
+  const phoneInput = document.getElementById('authUserPhone');
+  if (nameInput) nameInput.value = savedName;
+  if (phoneInput) phoneInput.value = savedPhone;
+
+  // Clear OTP boxes
+  document.querySelectorAll('.otp-digit').forEach(d => {
+    d.value = '';
+    d.classList.remove('filled');
+  });
+
+  authScreen.style.display = 'flex';
+  void authScreen.offsetWidth; // Force layout recalculation
+  authScreen.classList.remove('hidden');
+}
+
+function closeAuthScreen() {
+  const authScreen = document.getElementById('authScreen');
+  if (!authScreen) return;
+  authScreen.classList.add('hidden');
+  setTimeout(() => {
+    authScreen.style.display = 'none';
+  }, 350);
+}
+
+function startOtpCountdown() {
+  clearInterval(resendTimerInterval);
+  let timeLeft = 30;
+  const resendBtn = document.getElementById('resendOtpBtn');
+  const timerSpan = document.getElementById('resendTimer');
+
+  if (resendBtn) resendBtn.disabled = true;
+  if (timerSpan) timerSpan.textContent = timeLeft;
+
+  resendTimerInterval = setInterval(() => {
+    timeLeft--;
+    if (timerSpan) timerSpan.textContent = timeLeft;
+    if (timeLeft <= 0) {
+      clearInterval(resendTimerInterval);
+      if (resendBtn) {
+        resendBtn.disabled = false;
+        resendBtn.textContent = 'Resend Code Now';
+      }
+    }
+  }, 1000);
+}
+
+function setupAuthScreen() {
+  const authScreen = document.getElementById('authScreen');
+  if (!authScreen) return;
+
+  const stepPhone = document.getElementById('authStepPhone');
+  const stepOtp = document.getElementById('authStepOtp');
+  const sendOtpBtn = document.getElementById('sendOtpBtn');
+  const authBackToPhoneBtn = document.getElementById('authBackToPhoneBtn');
+  const verifyOtpBtn = document.getElementById('verifyOtpBtn');
+  const otpDemoFillBtn = document.getElementById('otpDemoFillBtn');
+  const resendOtpBtn = document.getElementById('resendOtpBtn');
+  const otpDigits = document.querySelectorAll('.otp-digit');
+  const logoutProfileBtn = document.getElementById('logoutProfileBtn');
+
+  // Step 1: Send OTP Click
+  if (sendOtpBtn) {
+    sendOtpBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const nameInput = document.getElementById('authUserName');
+      const phoneInput = document.getElementById('authUserPhone');
+
+      const name = nameInput ? nameInput.value.trim() : '';
+      const phone = phoneInput ? phoneInput.value.trim() : '';
+
+      if (!name) {
+        alert('Please enter your name / कृपया अपना नाम दर्ज करें');
+        if (nameInput) nameInput.focus();
+        return;
+      }
+      if (!phone || phone.length < 10) {
+        alert('Please enter a valid 10-digit phone number / मान्य १० अंकों का मोबाइल नंबर दर्ज करें');
+        if (phoneInput) phoneInput.focus();
+        return;
+      }
+
+      // Display target phone in OTP step
+      const otpDisplayPhone = document.getElementById('otpDisplayPhone');
+      if (otpDisplayPhone) {
+        otpDisplayPhone.textContent = `+91 ${phone}`;
+      }
+
+      // Transition to Step 2 (OTP)
+      stepPhone.classList.remove('active');
+      stepOtp.classList.add('active');
+
+      // Start Countdown and focus first digit
+      startOtpCountdown();
+      if (otpDigits.length > 0) {
+        otpDigits[0].focus();
+      }
+    });
+  }
+
+  // Step 2: Back to Phone step
+  if (authBackToPhoneBtn) {
+    authBackToPhoneBtn.addEventListener('click', () => {
+      stepOtp.classList.remove('active');
+      stepPhone.classList.add('active');
+      clearInterval(resendTimerInterval);
+    });
+  }
+
+  // OTP 6-Digit input navigation & typing handling
+  otpDigits.forEach((input, idx) => {
+    input.addEventListener('input', (e) => {
+      const val = e.target.value;
+      if (val) {
+        input.classList.add('filled');
+        if (idx < otpDigits.length - 1) {
+          otpDigits[idx + 1].focus();
+        }
+      } else {
+        input.classList.remove('filled');
+      }
+    });
+
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Backspace' && !input.value && idx > 0) {
+        otpDigits[idx - 1].focus();
+      }
+    });
+
+    input.addEventListener('paste', (e) => {
+      e.preventDefault();
+      const pasteData = (e.clipboardData || window.clipboardData).getData('text').trim();
+      if (/^\d+$/.test(pasteData)) {
+        const digits = pasteData.split('').slice(0, 6);
+        digits.forEach((digit, i) => {
+          if (otpDigits[i]) {
+            otpDigits[i].value = digit;
+            otpDigits[i].classList.add('filled');
+          }
+        });
+        if (digits.length < 6 && otpDigits[digits.length]) {
+          otpDigits[digits.length].focus();
+        } else if (otpDigits[5]) {
+          otpDigits[5].focus();
+        }
+      }
+    });
+  });
+
+  // Demo auto-fill OTP button
+  if (otpDemoFillBtn) {
+    otpDemoFillBtn.addEventListener('click', () => {
+      const demoCode = ['1', '2', '3', '4', '5', '6'];
+      demoCode.forEach((d, i) => {
+        if (otpDigits[i]) {
+          otpDigits[i].value = d;
+          otpDigits[i].classList.add('filled');
+        }
+      });
+    });
+  }
+
+  // Resend OTP button
+  if (resendOtpBtn) {
+    resendOtpBtn.addEventListener('click', () => {
+      if (resendOtpBtn.disabled) return;
+      startOtpCountdown();
+      alert('A new 6-digit OTP has been sent to your phone! (Demo: 123456)');
+    });
+  }
+
+  // Step 2: Verify OTP
+  if (verifyOtpBtn) {
+    verifyOtpBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      let enteredOtp = '';
+      otpDigits.forEach(d => enteredOtp += (d.value || ''));
+
+      if (enteredOtp.length < 6) {
+        alert('Please enter all 6 digits of the OTP / कृपया सभी ६ अंक दर्ज करें');
+        return;
+      }
+
+      // Save user profile details
+      const nameInput = document.getElementById('authUserName');
+      const phoneInput = document.getElementById('authUserPhone');
+      const name = nameInput ? nameInput.value.trim() : 'Ram Kumar';
+      const phone = phoneInput ? phoneInput.value.trim() : '9876543210';
+
+      localStorage.setItem('kvic_logged_in', 'true');
+      localStorage.setItem('kvic_user_name', name);
+      localStorage.setItem('kvic_user_phone', phone);
+
+      // Update Beekeeper profile display in modal
+      const profileNameEl = document.getElementById('profileBeekeeperName');
+      const profileModalUserName = document.getElementById('profileModalUserName');
+      const profileModalUserPhone = document.getElementById('profileModalUserPhone');
+      if (profileNameEl) {
+        profileNameEl.textContent = `${name}`;
+      }
+      if (profileModalUserName) {
+        profileModalUserName.textContent = `${name}`;
+      }
+      if (profileModalUserPhone) {
+        profileModalUserPhone.innerHTML = `+91 ${phone} • <span class="badge-id">KVIC-UP-2026-8841</span>`;
+      }
+
+      // Smoothly close auth and enter portal
+      closeAuthScreen();
+    });
+  }
+
+  // Profile modal Logout button
+  if (logoutProfileBtn) {
+    logoutProfileBtn.addEventListener('click', () => {
+      const profileModal = document.getElementById('userProfileModal');
+      if (profileModal) profileModal.classList.add('hidden');
+      localStorage.removeItem('kvic_logged_in');
+      openAuthScreen();
+    });
+  }
+
+  // Expose globally
+  window.openAuthScreen = openAuthScreen;
+  window.closeAuthScreen = closeAuthScreen;
+}
+
+
